@@ -101,6 +101,7 @@ namespace ElectronicObserver.Window.Control
 				UpdateText();
 				Label.ImageIndex = imageIndex;
 				Label.BackColor = backColor;
+				Label.ForeColor = (backColor == Color.Transparent) ? Color.White : SystemColors.ControlText;
 			}
 
 			public void SetInformation(FleetStates state, string text, string shortenedText, int imageIndex)
@@ -410,7 +411,10 @@ namespace ElectronicObserver.Window.Control
 				for (int i = 0; i < index; i++)
 				{
 					if (StateLabels[i].Label.BackColor == Color.Transparent)
+					{
 						StateLabels[i].Label.BackColor = Color.LightGreen;
+						StateLabels[i].Label.ForeColor = SystemColors.ControlText;
+					}
 				}
 			}
 
@@ -463,11 +467,15 @@ namespace ElectronicObserver.Window.Control
 
 					case FleetStates.Damaged:
 						if (Utility.Configuration.Config.FormFleet.BlinkAtDamaged)
+						{
 							state.Label.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightCoral : Color.Transparent;
+							state.Label.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
+						}
 						break;
 
 					case FleetStates.SortieDamaged:
 						state.Label.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightCoral : Color.Transparent;
+						state.Label.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
 						break;
 
 					case FleetStates.Docking:
@@ -475,7 +483,10 @@ namespace ElectronicObserver.Window.Control
 						state.Text = "入渠中 " + state.ShortenedText;
 						state.UpdateText();
 						if (Utility.Configuration.Config.FormFleet.BlinkAtCompletion && (state.Timer - DateTime.Now).TotalMilliseconds <= Utility.Configuration.Config.NotifierRepair.AccelInterval)
+						{
 							state.Label.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+							state.Label.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
+						}
 						break;
 
 					case FleetStates.Expedition:
@@ -483,7 +494,10 @@ namespace ElectronicObserver.Window.Control
 						state.Text = "遠征中 " + state.ShortenedText;
 						state.UpdateText();
 						if (Utility.Configuration.Config.FormFleet.BlinkAtCompletion && (state.Timer - DateTime.Now).TotalMilliseconds <= Utility.Configuration.Config.NotifierExpedition.AccelInterval)
+						{
 							state.Label.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+							state.Label.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
+						}
 						break;
 
 					case FleetStates.Tired:
@@ -491,7 +505,10 @@ namespace ElectronicObserver.Window.Control
 						state.Text = "疲労 " + state.ShortenedText;
 						state.UpdateText();
 						if (Utility.Configuration.Config.FormFleet.BlinkAtCompletion && (state.Timer - DateTime.Now).TotalMilliseconds <= 0)
+						{
 							state.Label.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+							state.Label.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
+						}
 						break;
 
 					case FleetStates.AnchorageRepairing:
