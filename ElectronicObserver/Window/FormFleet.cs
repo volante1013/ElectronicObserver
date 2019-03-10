@@ -487,7 +487,8 @@ namespace ElectronicObserver.Window
 						}
 						else
 						{
-							Name.BackColor = SystemColors.Control;
+							//Name.BackColor = SystemColors.Control;
+							Name.BackColor = Color.FromArgb(64, 64, 64);
 						}
 					}
 
@@ -546,7 +547,8 @@ namespace ElectronicObserver.Window
 					}
 					else
 					{
-						HP.BackColor = SystemColors.Control;
+						//HP.BackColor = SystemColors.Control;
+						HP.BackColor = Color.FromArgb(64, 64, 64);
 					}
 					{
 						StringBuilder sb = new StringBuilder();
@@ -854,8 +856,10 @@ namespace ElectronicObserver.Window
 
 			ConfigurationChanged();
 
-			MainFontColor = Color.FromArgb(0x00, 0x00, 0x00);
+			//MainFontColor = Color.FromArgb(0x00, 0x00, 0x00);
+			MainFontColor = Color.White;
 			SubFontColor = Color.FromArgb(0x88, 0x88, 0x88);
+
 
 			AnchorageRepairBound = 0;
 
