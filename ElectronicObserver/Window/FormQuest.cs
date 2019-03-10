@@ -39,10 +39,14 @@ namespace ElectronicObserver.Window
 			{
 				Alignment = DataGridViewContentAlignment.MiddleLeft
 			};
-			CSDefaultLeft.BackColor =
-			CSDefaultLeft.SelectionBackColor = SystemColors.Control;
-			CSDefaultLeft.ForeColor = SystemColors.ControlText;
-			CSDefaultLeft.SelectionForeColor = SystemColors.ControlText;
+			//CSDefaultLeft.BackColor =
+			//CSDefaultLeft.SelectionBackColor = SystemColors.Control;
+			//CSDefaultLeft.ForeColor = SystemColors.ControlText;
+			//CSDefaultLeft.SelectionForeColor = SystemColors.ControlText;
+			CSDefaultLeft.BackColor = 
+			CSDefaultLeft.SelectionBackColor = Color.FromArgb(64, 64, 64);
+			CSDefaultLeft.ForeColor = 
+			CSDefaultLeft.SelectionForeColor = Color.White;
 			CSDefaultLeft.WrapMode = DataGridViewTriState.False;
 
 			CSDefaultCenter = new DataGridViewCellStyle(CSDefaultLeft)
@@ -90,6 +94,8 @@ namespace ElectronicObserver.Window
 
 				CSCategories[i].BackColor =
 				CSCategories[i].SelectionBackColor = c;
+				CSCategories[i].ForeColor =
+				CSCategories[i].SelectionForeColor = SystemColors.ControlText;
 			}
 
 			QuestView.DefaultCellStyle = CSDefaultCenter;
