@@ -152,6 +152,7 @@ namespace ElectronicObserver.Window
 					if (Utility.Configuration.Config.FormArsenal.BlinkAtCompletion && (time - DateTime.Now).TotalMilliseconds <= Utility.Configuration.Config.NotifierConstruction.AccelInterval)
 					{
 						CompletionTime.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+						CompletionTime.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
 					}
 
 				}
@@ -159,6 +160,7 @@ namespace ElectronicObserver.Window
 				{
 					//完成しているので
 					CompletionTime.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+					CompletionTime.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
 				}
 			}
 
