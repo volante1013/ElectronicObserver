@@ -34,8 +34,8 @@
 			// 
 			// label1
 			// 
-			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-			| System.Windows.Forms.AnchorStyles.Right)));
+			this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.label1.Location = new System.Drawing.Point(45, 9);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(243, 50);
@@ -44,6 +44,7 @@
 			// 
 			// windowCaptureButton
 			// 
+			this.windowCaptureButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.windowCaptureButton.Location = new System.Drawing.Point(12, 12);
 			this.windowCaptureButton.Name = "windowCaptureButton";
 			this.windowCaptureButton.Size = new System.Drawing.Size(27, 27);
@@ -55,10 +56,12 @@
 			// 
 			this.AutoHidePortion = 150D;
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ClientSize = new System.Drawing.Size(300, 200);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.windowCaptureButton);
 			this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(128)));
+			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
 			this.Name = "FormWindowCapture";

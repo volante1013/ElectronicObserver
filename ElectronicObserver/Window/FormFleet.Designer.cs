@@ -70,69 +70,78 @@
 			// 
 			// ContextMenuFleet
 			// 
+			this.ContextMenuFleet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ContextMenuFleet.ImageScalingSize = new System.Drawing.Size(32, 32);
 			this.ContextMenuFleet.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.ContextMenuFleet_CopyFleet,
-			this.ContextMenuFleet_CopyFleetDeckBuilder,
-			this.ContextMenuFleet_CopyKanmusuList,
-			this.toolStripSeparator1,
-			this.ContextMenuFleet_AntiAirDetails,
-			this.ContextMenuFleet_Capture,
-			this.ContextMenuFleet_OutputFleetImage});
+            this.ContextMenuFleet_CopyFleet,
+            this.ContextMenuFleet_CopyFleetDeckBuilder,
+            this.ContextMenuFleet_CopyKanmusuList,
+            this.toolStripSeparator1,
+            this.ContextMenuFleet_AntiAirDetails,
+            this.ContextMenuFleet_Capture,
+            this.ContextMenuFleet_OutputFleetImage});
 			this.ContextMenuFleet.Name = "ContextMenuFleet";
-			this.ContextMenuFleet.Size = new System.Drawing.Size(228, 164);
+			this.ContextMenuFleet.Size = new System.Drawing.Size(218, 142);
 			this.ContextMenuFleet.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuFleet_Opening);
 			// 
 			// ContextMenuFleet_CopyFleet
 			// 
+			this.ContextMenuFleet_CopyFleet.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_CopyFleet.Name = "ContextMenuFleet_CopyFleet";
-			this.ContextMenuFleet_CopyFleet.Size = new System.Drawing.Size(227, 22);
+			this.ContextMenuFleet_CopyFleet.Size = new System.Drawing.Size(217, 22);
 			this.ContextMenuFleet_CopyFleet.Text = "編成テキストをコピー(&C)";
 			this.ContextMenuFleet_CopyFleet.Click += new System.EventHandler(this.ContextMenuFleet_CopyFleet_Click);
 			// 
 			// ContextMenuFleet_CopyFleetDeckBuilder
 			// 
+			this.ContextMenuFleet_CopyFleetDeckBuilder.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_CopyFleetDeckBuilder.Name = "ContextMenuFleet_CopyFleetDeckBuilder";
-			this.ContextMenuFleet_CopyFleetDeckBuilder.Size = new System.Drawing.Size(227, 22);
+			this.ContextMenuFleet_CopyFleetDeckBuilder.Size = new System.Drawing.Size(217, 22);
 			this.ContextMenuFleet_CopyFleetDeckBuilder.Text = "編成をコピー(デッキビルダー)(&D)";
 			this.ContextMenuFleet_CopyFleetDeckBuilder.Click += new System.EventHandler(this.ContextMenuFleet_CopyFleetDeckBuilder_Click);
 			// 
 			// ContextMenuFleet_CopyKanmusuList
 			// 
+			this.ContextMenuFleet_CopyKanmusuList.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_CopyKanmusuList.Name = "ContextMenuFleet_CopyKanmusuList";
-			this.ContextMenuFleet_CopyKanmusuList.Size = new System.Drawing.Size(227, 22);
+			this.ContextMenuFleet_CopyKanmusuList.Size = new System.Drawing.Size(217, 22);
 			this.ContextMenuFleet_CopyKanmusuList.Text = "艦隊晒しページへコピー(&R)";
 			this.ContextMenuFleet_CopyKanmusuList.Click += new System.EventHandler(this.ContextMenuFleet_CopyKanmusuList_Click);
 			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(224, 6);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(214, 6);
 			// 
 			// ContextMenuFleet_AntiAirDetails
 			// 
+			this.ContextMenuFleet_AntiAirDetails.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_AntiAirDetails.Name = "ContextMenuFleet_AntiAirDetails";
-			this.ContextMenuFleet_AntiAirDetails.Size = new System.Drawing.Size(227, 22);
+			this.ContextMenuFleet_AntiAirDetails.Size = new System.Drawing.Size(217, 22);
 			this.ContextMenuFleet_AntiAirDetails.Text = "対空砲火の詳細表示(&A)";
 			this.ContextMenuFleet_AntiAirDetails.Click += new System.EventHandler(this.ContextMenuFleet_AntiAirDetails_Click);
 			// 
 			// ContextMenuFleet_Capture
 			// 
+			this.ContextMenuFleet_Capture.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_Capture.Name = "ContextMenuFleet_Capture";
-			this.ContextMenuFleet_Capture.Size = new System.Drawing.Size(227, 22);
+			this.ContextMenuFleet_Capture.Size = new System.Drawing.Size(217, 22);
 			this.ContextMenuFleet_Capture.Text = "この画面をキャプチャ(&S)";
 			this.ContextMenuFleet_Capture.Click += new System.EventHandler(this.ContextMenuFleet_Capture_Click);
 			// 
 			// ContextMenuFleet_OutputFleetImage
 			// 
+			this.ContextMenuFleet_OutputFleetImage.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_OutputFleetImage.Name = "ContextMenuFleet_OutputFleetImage";
-			this.ContextMenuFleet_OutputFleetImage.Size = new System.Drawing.Size(227, 22);
+			this.ContextMenuFleet_OutputFleetImage.Size = new System.Drawing.Size(217, 22);
 			this.ContextMenuFleet_OutputFleetImage.Text = "編成画像を出力(&I)";
 			this.ContextMenuFleet_OutputFleetImage.Click += new System.EventHandler(this.ContextMenuFleet_OutputFleetImage_Click);
 			// 
 			// ToolTipInfo
 			// 
 			this.ToolTipInfo.AutoPopDelay = 30000;
+			this.ToolTipInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.ToolTipInfo.ForeColor = System.Drawing.Color.White;
 			this.ToolTipInfo.InitialDelay = 500;
 			this.ToolTipInfo.ReshowDelay = 100;
 			this.ToolTipInfo.ShowAlways = true;
@@ -142,12 +151,13 @@
 			this.AutoHidePortion = 150D;
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.AutoScroll = true;
-			this.BackColor = System.Drawing.SystemColors.Control;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ClientSize = new System.Drawing.Size(300, 200);
 			this.Controls.Add(this.TableFleet);
 			this.Controls.Add(this.TableMember);
 			this.DoubleBuffered = true;
 			this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
