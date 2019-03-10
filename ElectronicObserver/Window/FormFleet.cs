@@ -367,6 +367,7 @@ namespace ElectronicObserver.Window
 				HP.UsePrevValue = false;
 				HP.MainFontColor = parent.MainFontColor;
 				HP.SubFontColor = parent.SubFontColor;
+				HP.RepairFontColor = Color.LightBlue;
 				HP.Padding = new Padding(0, 0, 0, 0);
 				HP.Margin = new Padding(2, 1, 2, 2);
 				HP.AutoSize = true;
@@ -549,6 +550,7 @@ namespace ElectronicObserver.Window
 					{
 						//HP.BackColor = SystemColors.Control;
 						HP.BackColor = Color.FromArgb(64, 64, 64);
+						HP.ForeColor = Color.White;
 					}
 					{
 						StringBuilder sb = new StringBuilder();
