@@ -117,6 +117,7 @@
 			this.HQLevel.MaximumValue = 999;
 			this.HQLevel.Name = "HQLevel";
 			this.HQLevel.Size = new System.Drawing.Size(88, 20);
+			this.HQLevel.SubFontColor = System.Drawing.Color.White;
 			this.HQLevel.TabIndex = 0;
 			this.HQLevel.Text = "HQ Lv.";
 			// 
