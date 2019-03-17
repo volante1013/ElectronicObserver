@@ -104,7 +104,7 @@ namespace ElectronicObserver.Window
 				{
 					//なし
 					ShipName.Text = "-";
-					ShipName.ForeColor = Color.FromArgb(0x00, 0x00, 0x00);
+					ShipName.ForeColor = Color.White;
 					Equipments.Visible = false;
 					ToolTipInfo.SetToolTip(ShipName, null);
 					ToolTipInfo.SetToolTip(Equipments, null);
@@ -290,7 +290,7 @@ namespace ElectronicObserver.Window
 					{
 						// nothing
 						ShipNames[i].Text = "-";
-						ShipNames[i].ForeColor = Color.Black;
+						ShipNames[i].ForeColor = Color.White;
 						ShipNames[i].Tag = -1;
 						ShipNames[i].Cursor = Cursors.Default;
 						ToolTipInfo.SetToolTip(ShipNames[i], null);
@@ -556,7 +556,7 @@ namespace ElectronicObserver.Window
 
 
 
-			MainFontColor = Color.FromArgb(0x00, 0x00, 0x00);
+			MainFontColor = Color.FromArgb(0xFF, 0xFF, 0xFF);
 			SubFontColor = Color.FromArgb(0x88, 0x88, 0x88);
 
 
@@ -650,13 +650,13 @@ namespace ElectronicObserver.Window
 					case 0:
 					case 1:
 					default:    //昼夜戦・その他
-						return SystemColors.ControlText;
+						return Color.White;
 					case 2:
 					case 3:     //夜戦・夜昼戦
 						return Color.Navy;
 					case 4:     //航空戦
 					case 6:     //長距離空襲戦
-						return Color.DarkGreen;
+						return Color.LightGreen;
 					case 5:     // 敵連合
 						return Color.DarkRed;
 					case 7:     // 夜昼戦(対連合艦隊)
