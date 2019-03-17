@@ -39,10 +39,6 @@ namespace ElectronicObserver.Window
 			{
 				Alignment = DataGridViewContentAlignment.MiddleLeft
 			};
-			//CSDefaultLeft.BackColor =
-			//CSDefaultLeft.SelectionBackColor = SystemColors.Control;
-			//CSDefaultLeft.ForeColor = SystemColors.ControlText;
-			//CSDefaultLeft.SelectionForeColor = SystemColors.ControlText;
 			CSDefaultLeft.BackColor = 
 			CSDefaultLeft.SelectionBackColor = Color.FromArgb(64, 64, 64);
 			CSDefaultLeft.ForeColor = 
