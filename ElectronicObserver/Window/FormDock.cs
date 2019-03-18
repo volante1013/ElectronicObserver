@@ -96,6 +96,7 @@ namespace ElectronicObserver.Window
 				DockData dock = db.Docks[dockID];
 
 				RepairTime.BackColor = Color.Transparent;
+				RepairTime.ForeColor = Color.White;
 				ToolTipInfo.SetToolTip(ShipName, null);
 				ToolTipInfo.SetToolTip(RepairTime, null);
 
@@ -142,6 +143,7 @@ namespace ElectronicObserver.Window
 					if (Utility.Configuration.Config.FormDock.BlinkAtCompletion && (time - DateTime.Now).TotalMilliseconds <= Utility.Configuration.Config.NotifierRepair.AccelInterval)
 					{
 						RepairTime.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+						RepairTime.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
 					}
 				}
 			}
@@ -155,6 +157,7 @@ namespace ElectronicObserver.Window
 				ShipName.Font = parent.Font;
 				RepairTime.Font = parent.Font;
 				RepairTime.BackColor = Color.Transparent;
+				RepairTime.ForeColor = Color.White;
 
 				ShipName.MaximumSize = new Size(config.MaxShipNameWidth, ShipName.MaximumSize.Height);
 			}

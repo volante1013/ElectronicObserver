@@ -95,6 +95,7 @@ namespace ElectronicObserver.Window
 				bool showShipName = Utility.Configuration.Config.FormArsenal.ShowShipName;
 
 				CompletionTime.BackColor = Color.Transparent;
+				CompletionTime.ForeColor = Color.White;
 				tooltip.SetToolTip(ShipName, null);
 				tooltip.SetToolTip(CompletionTime, null);
 
