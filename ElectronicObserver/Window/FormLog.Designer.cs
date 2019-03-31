@@ -37,9 +37,9 @@
 			// 
 			// LogList
 			// 
-			this.LogList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.LogList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+			| System.Windows.Forms.AnchorStyles.Left)
+			| System.Windows.Forms.AnchorStyles.Right)));
 			this.LogList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.LogList.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.LogList.ContextMenuStrip = this.ContextMenuLog;
@@ -58,15 +58,15 @@
 			// 
 			this.ContextMenuLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ContextMenuLog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ContextMenuLog_Clear});
+			this.ContextMenuLog_Clear});
 			this.ContextMenuLog.Name = "ContextMenuLog";
-			this.ContextMenuLog.Size = new System.Drawing.Size(116, 26);
+			this.ContextMenuLog.Size = new System.Drawing.Size(131, 26);
 			// 
 			// ContextMenuLog_Clear
 			// 
 			this.ContextMenuLog_Clear.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuLog_Clear.Name = "ContextMenuLog_Clear";
-			this.ContextMenuLog_Clear.Size = new System.Drawing.Size(115, 22);
+			this.ContextMenuLog_Clear.Size = new System.Drawing.Size(152, 22);
 			this.ContextMenuLog_Clear.Text = "クリア(&C)";
 			this.ContextMenuLog_Clear.Click += new System.EventHandler(this.ContextMenuLog_Clear_Click);
 			// 

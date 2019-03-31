@@ -1,4 +1,4 @@
-﻿namespace ElectronicObserver.Window
+namespace ElectronicObserver.Window
 {
 	partial class FormMain
 	{
@@ -90,7 +90,6 @@
 			this.StripMenu_Tool_AntiAirDefense = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenu_Tool_FleetImageGenerator = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenu_Tool_BaseAirCorpsSimulation = new System.Windows.Forms.ToolStripMenuItem();
-			this.StripMenu_Tool_ExpChecker = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenu_Debug = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenu_Debug_LoadAPIFromFile = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenu_Debug_LoadInitialAPI = new System.Windows.Forms.ToolStripMenuItem();
@@ -108,12 +107,15 @@
 			this.StripStatus_Clock = new System.Windows.Forms.ToolStripStatusLabel();
 			this.UIUpdateTimer = new System.Windows.Forms.Timer(this.components);
 			this.MainDockPanel = new WeifenLuo.WinFormsUI.Docking.DockPanel();
+			this.StripMenu_Tool_ExpChecker = new System.Windows.Forms.ToolStripMenuItem();
 			this.StripMenu.SuspendLayout();
 			this.StripStatus.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// StripMenu
 			// 
+			this.StripMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.StripMenu.ForeColor = System.Drawing.Color.White;
 			this.StripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StripMenu_File,
             this.StripMenu_View,
@@ -137,7 +139,7 @@
             this.toolStripSeparator5,
             this.StripMenu_File_Close});
 			this.StripMenu_File.Name = "StripMenu_File";
-			this.StripMenu_File.Size = new System.Drawing.Size(67, 20);
+			this.StripMenu_File.Size = new System.Drawing.Size(70, 20);
 			this.StripMenu_File.Text = "ファイル(&F)";
 			// 
 			// StripMenu_File_Record
@@ -148,7 +150,7 @@
             this.StripMenu_File_Record_Load});
 			this.StripMenu_File_Record.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Record.Name = "StripMenu_File_Record";
-			this.StripMenu_File_Record.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_File_Record.Size = new System.Drawing.Size(135, 22);
 			this.StripMenu_File_Record.Text = "レコード(&R)";
 			// 
 			// StripMenu_File_Record_Save
@@ -156,7 +158,7 @@
 			this.StripMenu_File_Record_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_File_Record_Save.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Record_Save.Name = "StripMenu_File_Record_Save";
-			this.StripMenu_File_Record_Save.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_File_Record_Save.Size = new System.Drawing.Size(121, 22);
 			this.StripMenu_File_Record_Save.Text = "セーブ(&S)";
 			this.StripMenu_File_Record_Save.Click += new System.EventHandler(this.StripMenu_File_SaveData_Save_Click);
 			// 
@@ -165,7 +167,7 @@
 			this.StripMenu_File_Record_Load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_File_Record_Load.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Record_Load.Name = "StripMenu_File_Record_Load";
-			this.StripMenu_File_Record_Load.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_File_Record_Load.Size = new System.Drawing.Size(121, 22);
 			this.StripMenu_File_Record_Load.Text = "ロード(&L)";
 			this.StripMenu_File_Record_Load.Click += new System.EventHandler(this.StripMenu_File_SaveData_Load_Click);
 			// 
@@ -183,7 +185,7 @@
             this.StripMenu_File_Layout_TopMost});
 			this.StripMenu_File_Layout.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Layout.Name = "StripMenu_File_Layout";
-			this.StripMenu_File_Layout.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_File_Layout.Size = new System.Drawing.Size(135, 22);
 			this.StripMenu_File_Layout.Text = "レイアウト(&L)";
 			// 
 			// StripMenu_File_Layout_Load
@@ -191,7 +193,7 @@
 			this.StripMenu_File_Layout_Load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_File_Layout_Load.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Layout_Load.Name = "StripMenu_File_Layout_Load";
-			this.StripMenu_File_Layout_Load.Size = new System.Drawing.Size(199, 22);
+			this.StripMenu_File_Layout_Load.Size = new System.Drawing.Size(203, 22);
 			this.StripMenu_File_Layout_Load.Text = "復元(&L)";
 			this.StripMenu_File_Layout_Load.Click += new System.EventHandler(this.StripMenu_File_Layout_Load_Click);
 			// 
@@ -200,7 +202,7 @@
 			this.StripMenu_File_Layout_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_File_Layout_Save.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Layout_Save.Name = "StripMenu_File_Layout_Save";
-			this.StripMenu_File_Layout_Save.Size = new System.Drawing.Size(199, 22);
+			this.StripMenu_File_Layout_Save.Size = new System.Drawing.Size(203, 22);
 			this.StripMenu_File_Layout_Save.Text = "保存(&S)";
 			this.StripMenu_File_Layout_Save.Click += new System.EventHandler(this.StripMenu_File_Layout_Save_Click);
 			// 
@@ -209,7 +211,7 @@
 			this.StripMenu_File_Layout_Open.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_File_Layout_Open.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Layout_Open.Name = "StripMenu_File_Layout_Open";
-			this.StripMenu_File_Layout_Open.Size = new System.Drawing.Size(199, 22);
+			this.StripMenu_File_Layout_Open.Size = new System.Drawing.Size(203, 22);
 			this.StripMenu_File_Layout_Open.Text = "別のファイルから復元(&O)...";
 			this.StripMenu_File_Layout_Open.Click += new System.EventHandler(this.StripMenu_File_Layout_Open_Click);
 			// 
@@ -218,7 +220,7 @@
 			this.StripMenu_File_Layout_Change.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_File_Layout_Change.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Layout_Change.Name = "StripMenu_File_Layout_Change";
-			this.StripMenu_File_Layout_Change.Size = new System.Drawing.Size(199, 22);
+			this.StripMenu_File_Layout_Change.Size = new System.Drawing.Size(203, 22);
 			this.StripMenu_File_Layout_Change.Text = "別のファイルへ保存(&C)...";
 			this.StripMenu_File_Layout_Change.Click += new System.EventHandler(this.StripMenu_File_Layout_Change_Click);
 			// 
@@ -227,7 +229,7 @@
 			this.toolStripSeparator9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.toolStripSeparator9.ForeColor = System.Drawing.Color.White;
 			this.toolStripSeparator9.Name = "toolStripSeparator9";
-			this.toolStripSeparator9.Size = new System.Drawing.Size(196, 6);
+			this.toolStripSeparator9.Size = new System.Drawing.Size(200, 6);
 			// 
 			// StripMenu_File_Layout_LockLayout
 			// 
@@ -235,7 +237,7 @@
 			this.StripMenu_File_Layout_LockLayout.CheckOnClick = true;
 			this.StripMenu_File_Layout_LockLayout.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Layout_LockLayout.Name = "StripMenu_File_Layout_LockLayout";
-			this.StripMenu_File_Layout_LockLayout.Size = new System.Drawing.Size(199, 22);
+			this.StripMenu_File_Layout_LockLayout.Size = new System.Drawing.Size(203, 22);
 			this.StripMenu_File_Layout_LockLayout.Text = "レイアウトのロック(&T)";
 			this.StripMenu_File_Layout_LockLayout.Click += new System.EventHandler(this.StripMenu_File_Layout_LockLayout_Click);
 			// 
@@ -244,7 +246,7 @@
 			this.toolStripSeparator10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.toolStripSeparator10.ForeColor = System.Drawing.Color.White;
 			this.toolStripSeparator10.Name = "toolStripSeparator10";
-			this.toolStripSeparator10.Size = new System.Drawing.Size(196, 6);
+			this.toolStripSeparator10.Size = new System.Drawing.Size(200, 6);
 			// 
 			// StripMenu_File_Layout_TopMost
 			// 
@@ -252,7 +254,7 @@
 			this.StripMenu_File_Layout_TopMost.CheckOnClick = true;
 			this.StripMenu_File_Layout_TopMost.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Layout_TopMost.Name = "StripMenu_File_Layout_TopMost";
-			this.StripMenu_File_Layout_TopMost.Size = new System.Drawing.Size(199, 22);
+			this.StripMenu_File_Layout_TopMost.Size = new System.Drawing.Size(203, 22);
 			this.StripMenu_File_Layout_TopMost.Text = "最前面に表示(&M)";
 			this.StripMenu_File_Layout_TopMost.Click += new System.EventHandler(this.StripMenu_File_Layout_TopMost_Click);
 			// 
@@ -263,7 +265,7 @@
             this.StripMenu_File_Notification_MuteAll});
 			this.StripMenu_File_Notification.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Notification.Name = "StripMenu_File_Notification";
-			this.StripMenu_File_Notification.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_File_Notification.Size = new System.Drawing.Size(135, 22);
 			this.StripMenu_File_Notification.Text = "通知(&N)";
 			// 
 			// StripMenu_File_Notification_MuteAll
@@ -272,23 +274,23 @@
 			this.StripMenu_File_Notification_MuteAll.CheckOnClick = true;
 			this.StripMenu_File_Notification_MuteAll.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Notification_MuteAll.Name = "StripMenu_File_Notification_MuteAll";
-			this.StripMenu_File_Notification_MuteAll.Size = new System.Drawing.Size(196, 22);
+			this.StripMenu_File_Notification_MuteAll.Size = new System.Drawing.Size(199, 22);
 			this.StripMenu_File_Notification_MuteAll.Text = "すべての通知をミュート(&M)";
 			this.StripMenu_File_Notification_MuteAll.Click += new System.EventHandler(this.StripMenu_File_Notification_MuteAll_Click);
 			// 
 			// toolStripSeparator6
 			// 
 			this.toolStripSeparator6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.toolStripSeparator6.ForeColor = System.Drawing.Color.White;
+			this.toolStripSeparator6.ForeColor = System.Drawing.SystemColors.Control;
 			this.toolStripSeparator6.Name = "toolStripSeparator6";
-			this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
+			this.toolStripSeparator6.Size = new System.Drawing.Size(132, 6);
 			// 
 			// StripMenu_File_Configuration
 			// 
 			this.StripMenu_File_Configuration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_File_Configuration.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Configuration.Name = "StripMenu_File_Configuration";
-			this.StripMenu_File_Configuration.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_File_Configuration.Size = new System.Drawing.Size(135, 22);
 			this.StripMenu_File_Configuration.Text = "設定(&C)...";
 			this.StripMenu_File_Configuration.Click += new System.EventHandler(this.StripMenu_File_Configuration_Click);
 			// 
@@ -296,14 +298,14 @@
 			// 
 			this.toolStripSeparator5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.toolStripSeparator5.Name = "toolStripSeparator5";
-			this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+			this.toolStripSeparator5.Size = new System.Drawing.Size(132, 6);
 			// 
 			// StripMenu_File_Close
 			// 
 			this.StripMenu_File_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_File_Close.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_File_Close.Name = "StripMenu_File_Close";
-			this.StripMenu_File_Close.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_File_Close.Size = new System.Drawing.Size(135, 22);
 			this.StripMenu_File_Close.Text = "終了(&X)";
 			this.StripMenu_File_Close.Click += new System.EventHandler(this.StripMenu_File_Close_Click);
 			// 
@@ -330,7 +332,7 @@
             this.StripMenu_WindowCapture,
             this.StripMenu_View_Json});
 			this.StripMenu_View.Name = "StripMenu_View";
-			this.StripMenu_View.Size = new System.Drawing.Size(58, 20);
+			this.StripMenu_View.Size = new System.Drawing.Size(61, 20);
 			this.StripMenu_View.Text = "表示(&V)";
 			// 
 			// StripMenu_View_Fleet
@@ -343,7 +345,7 @@
             this.StripMenu_View_Fleet_4});
 			this.StripMenu_View_Fleet.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Fleet.Name = "StripMenu_View_Fleet";
-			this.StripMenu_View_Fleet.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Fleet.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Fleet.Text = "艦隊(&F)";
 			// 
 			// StripMenu_View_Fleet_1
@@ -351,7 +353,7 @@
 			this.StripMenu_View_Fleet_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Fleet_1.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Fleet_1.Name = "StripMenu_View_Fleet_1";
-			this.StripMenu_View_Fleet_1.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Fleet_1.Size = new System.Drawing.Size(91, 22);
 			this.StripMenu_View_Fleet_1.Text = "#&1";
 			this.StripMenu_View_Fleet_1.Click += new System.EventHandler(this.StripMenu_View_Fleet_1_Click);
 			// 
@@ -360,7 +362,7 @@
 			this.StripMenu_View_Fleet_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Fleet_2.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Fleet_2.Name = "StripMenu_View_Fleet_2";
-			this.StripMenu_View_Fleet_2.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Fleet_2.Size = new System.Drawing.Size(91, 22);
 			this.StripMenu_View_Fleet_2.Text = "#&2";
 			this.StripMenu_View_Fleet_2.Click += new System.EventHandler(this.StripMenu_View_Fleet_2_Click);
 			// 
@@ -369,7 +371,7 @@
 			this.StripMenu_View_Fleet_3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Fleet_3.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Fleet_3.Name = "StripMenu_View_Fleet_3";
-			this.StripMenu_View_Fleet_3.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Fleet_3.Size = new System.Drawing.Size(91, 22);
 			this.StripMenu_View_Fleet_3.Text = "#&3";
 			this.StripMenu_View_Fleet_3.Click += new System.EventHandler(this.StripMenu_View_Fleet_3_Click);
 			// 
@@ -378,7 +380,7 @@
 			this.StripMenu_View_Fleet_4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Fleet_4.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Fleet_4.Name = "StripMenu_View_Fleet_4";
-			this.StripMenu_View_Fleet_4.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Fleet_4.Size = new System.Drawing.Size(91, 22);
 			this.StripMenu_View_Fleet_4.Text = "#&4";
 			this.StripMenu_View_Fleet_4.Click += new System.EventHandler(this.StripMenu_View_Fleet_4_Click);
 			// 
@@ -387,7 +389,7 @@
 			this.StripMenu_View_FleetOverview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_FleetOverview.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_FleetOverview.Name = "StripMenu_View_FleetOverview";
-			this.StripMenu_View_FleetOverview.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_FleetOverview.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_FleetOverview.Text = "艦隊一覧(&O)";
 			this.StripMenu_View_FleetOverview.Click += new System.EventHandler(this.StripMenu_View_FleetOverview_Click);
 			// 
@@ -396,7 +398,7 @@
 			this.StripMenu_View_ShipGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_ShipGroup.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_ShipGroup.Name = "StripMenu_View_ShipGroup";
-			this.StripMenu_View_ShipGroup.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_ShipGroup.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_ShipGroup.Text = "艦船グループ(&G)";
 			this.StripMenu_View_ShipGroup.Click += new System.EventHandler(this.StripMenu_View_ShipGroup_Click);
 			// 
@@ -404,14 +406,14 @@
 			// 
 			this.toolStripSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(179, 6);
 			// 
 			// StripMenu_View_Dock
 			// 
 			this.StripMenu_View_Dock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Dock.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Dock.Name = "StripMenu_View_Dock";
-			this.StripMenu_View_Dock.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Dock.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Dock.Text = "入渠(&D)";
 			this.StripMenu_View_Dock.Click += new System.EventHandler(this.StripMenu_View_Dock_Click);
 			// 
@@ -420,7 +422,7 @@
 			this.StripMenu_View_Arsenal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Arsenal.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Arsenal.Name = "StripMenu_View_Arsenal";
-			this.StripMenu_View_Arsenal.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Arsenal.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Arsenal.Text = "工廠(&A)";
 			this.StripMenu_View_Arsenal.Click += new System.EventHandler(this.StripMenu_View_Arsenal_Click);
 			// 
@@ -429,7 +431,7 @@
 			this.StripMenu_View_BaseAirCorps.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_BaseAirCorps.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_BaseAirCorps.Name = "StripMenu_View_BaseAirCorps";
-			this.StripMenu_View_BaseAirCorps.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_BaseAirCorps.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_BaseAirCorps.Text = "基地航空隊(&S)";
 			this.StripMenu_View_BaseAirCorps.Click += new System.EventHandler(this.StripMenu_View_BaseAirCorps_Click);
 			// 
@@ -437,14 +439,14 @@
 			// 
 			this.toolStripSeparator2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+			this.toolStripSeparator2.Size = new System.Drawing.Size(179, 6);
 			// 
 			// StripMenu_View_Headquarters
 			// 
 			this.StripMenu_View_Headquarters.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Headquarters.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Headquarters.Name = "StripMenu_View_Headquarters";
-			this.StripMenu_View_Headquarters.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Headquarters.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Headquarters.Text = "司令部(&H)";
 			this.StripMenu_View_Headquarters.Click += new System.EventHandler(this.StripMenu_View_Headquarters_Click);
 			// 
@@ -453,7 +455,7 @@
 			this.StripMenu_View_Quest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Quest.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Quest.Name = "StripMenu_View_Quest";
-			this.StripMenu_View_Quest.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Quest.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Quest.Text = "任務(&Q)";
 			this.StripMenu_View_Quest.Click += new System.EventHandler(this.StripMenu_View_Quest_Click);
 			// 
@@ -462,7 +464,7 @@
 			this.StripMenu_View_Information.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Information.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Information.Name = "StripMenu_View_Information";
-			this.StripMenu_View_Information.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Information.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Information.Text = "情報(&I)";
 			this.StripMenu_View_Information.Click += new System.EventHandler(this.StripMenu_View_Information_Click);
 			// 
@@ -470,14 +472,14 @@
 			// 
 			this.toolStripSeparator3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.toolStripSeparator3.Name = "toolStripSeparator3";
-			this.toolStripSeparator3.Size = new System.Drawing.Size(177, 6);
+			this.toolStripSeparator3.Size = new System.Drawing.Size(179, 6);
 			// 
 			// StripMenu_View_Compass
 			// 
 			this.StripMenu_View_Compass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Compass.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Compass.Name = "StripMenu_View_Compass";
-			this.StripMenu_View_Compass.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Compass.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Compass.Text = "羅針盤(&C)";
 			this.StripMenu_View_Compass.Click += new System.EventHandler(this.StripMenu_View_Compass_Click);
 			// 
@@ -486,7 +488,7 @@
 			this.StripMenu_View_Battle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Battle.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Battle.Name = "StripMenu_View_Battle";
-			this.StripMenu_View_Battle.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Battle.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Battle.Text = "戦闘(&B)";
 			this.StripMenu_View_Battle.Click += new System.EventHandler(this.StripMenu_View_Battle_Click);
 			// 
@@ -494,14 +496,14 @@
 			// 
 			this.toolStripSeparator4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.toolStripSeparator4.Name = "toolStripSeparator4";
-			this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
+			this.toolStripSeparator4.Size = new System.Drawing.Size(179, 6);
 			// 
 			// StripMenu_View_Browser
 			// 
 			this.StripMenu_View_Browser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Browser.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Browser.Name = "StripMenu_View_Browser";
-			this.StripMenu_View_Browser.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Browser.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Browser.Text = "ブラウザ(&M)";
 			this.StripMenu_View_Browser.Click += new System.EventHandler(this.StripMenu_View_Browser_Click);
 			// 
@@ -510,7 +512,7 @@
 			this.StripMenu_View_Log.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Log.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Log.Name = "StripMenu_View_Log";
-			this.StripMenu_View_Log.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Log.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Log.Text = "ログ(&L)";
 			this.StripMenu_View_Log.Click += new System.EventHandler(this.StripMenu_View_Log_Click);
 			// 
@@ -523,7 +525,7 @@
             this.StripMenu_WindowCapture_DetachAll});
 			this.StripMenu_WindowCapture.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_WindowCapture.Name = "StripMenu_WindowCapture";
-			this.StripMenu_WindowCapture.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_WindowCapture.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_WindowCapture.Text = "ウィンドウキャプチャ(&W)";
 			// 
 			// StripMenu_WindowCapture_SubWindow
@@ -531,7 +533,7 @@
 			this.StripMenu_WindowCapture_SubWindow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_WindowCapture_SubWindow.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_WindowCapture_SubWindow.Name = "StripMenu_WindowCapture_SubWindow";
-			this.StripMenu_WindowCapture_SubWindow.Size = new System.Drawing.Size(204, 22);
+			this.StripMenu_WindowCapture_SubWindow.Size = new System.Drawing.Size(209, 22);
 			this.StripMenu_WindowCapture_SubWindow.Text = "コントロールウィンドウ(&C)";
 			this.StripMenu_WindowCapture_SubWindow.Click += new System.EventHandler(this.StripMenu_WindowCapture_SubWindow_Click);
 			// 
@@ -540,7 +542,7 @@
 			this.StripMenu_WindowCapture_AttachAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_WindowCapture_AttachAll.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_WindowCapture_AttachAll.Name = "StripMenu_WindowCapture_AttachAll";
-			this.StripMenu_WindowCapture_AttachAll.Size = new System.Drawing.Size(204, 22);
+			this.StripMenu_WindowCapture_AttachAll.Size = new System.Drawing.Size(209, 22);
 			this.StripMenu_WindowCapture_AttachAll.Text = "全て再検索して取り込む(&S)";
 			this.StripMenu_WindowCapture_AttachAll.Click += new System.EventHandler(this.StripMenu_WindowCapture_AttachAll_Click);
 			// 
@@ -549,7 +551,7 @@
 			this.StripMenu_WindowCapture_DetachAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_WindowCapture_DetachAll.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_WindowCapture_DetachAll.Name = "StripMenu_WindowCapture_DetachAll";
-			this.StripMenu_WindowCapture_DetachAll.Size = new System.Drawing.Size(204, 22);
+			this.StripMenu_WindowCapture_DetachAll.Size = new System.Drawing.Size(209, 22);
 			this.StripMenu_WindowCapture_DetachAll.Text = "全てのウィンドウを開放(&R)";
 			this.StripMenu_WindowCapture_DetachAll.Click += new System.EventHandler(this.StripMenu_WindowCapture_DetachAll_Click);
 			// 
@@ -558,7 +560,7 @@
 			this.StripMenu_View_Json.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_View_Json.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_View_Json.Name = "StripMenu_View_Json";
-			this.StripMenu_View_Json.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_View_Json.Size = new System.Drawing.Size(182, 22);
 			this.StripMenu_View_Json.Text = "JSON(&J)";
 			this.StripMenu_View_Json.Click += new System.EventHandler(this.StripMenu_View_Json_Click);
 			// 
@@ -580,7 +582,7 @@
             this.StripMenu_Tool_BaseAirCorpsSimulation,
             this.StripMenu_Tool_ExpChecker});
 			this.StripMenu_Tool.Name = "StripMenu_Tool";
-			this.StripMenu_Tool.Size = new System.Drawing.Size(60, 20);
+			this.StripMenu_Tool.Size = new System.Drawing.Size(66, 20);
 			this.StripMenu_Tool.Text = "ツール(&T)";
 			// 
 			// StripMenu_Tool_EquipmentList
@@ -691,15 +693,6 @@
 			this.StripMenu_Tool_BaseAirCorpsSimulation.Text = "基地航空隊編成(&B)";
 			this.StripMenu_Tool_BaseAirCorpsSimulation.Click += new System.EventHandler(this.StripMenu_Tool_BaseAirCorpsSimulation_Click);
 			// 
-			// StripMenu_Tool_ExpChecker
-			// 
-			this.StripMenu_Tool_ExpChecker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.StripMenu_Tool_ExpChecker.ForeColor = System.Drawing.Color.White;
-			this.StripMenu_Tool_ExpChecker.Name = "StripMenu_Tool_ExpChecker";
-			this.StripMenu_Tool_ExpChecker.Size = new System.Drawing.Size(180, 22);
-			this.StripMenu_Tool_ExpChecker.Text = "必要経験値計算(&X)";
-			this.StripMenu_Tool_ExpChecker.Click += new System.EventHandler(this.StripMenu_Tool_ExpChecker_Click);
-			// 
 			// StripMenu_Debug
 			// 
 			this.StripMenu_Debug.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -711,7 +704,7 @@
             this.StripMenu_Debug_RenameShipResource,
             this.StripMenu_Debug_LoadDataFromOld});
 			this.StripMenu_Debug.Name = "StripMenu_Debug";
-			this.StripMenu_Debug.Size = new System.Drawing.Size(71, 20);
+			this.StripMenu_Debug.Size = new System.Drawing.Size(74, 20);
 			this.StripMenu_Debug.Text = "デバッグ(&D)";
 			// 
 			// StripMenu_Debug_LoadAPIFromFile
@@ -719,7 +712,7 @@
 			this.StripMenu_Debug_LoadAPIFromFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_Debug_LoadAPIFromFile.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_Debug_LoadAPIFromFile.Name = "StripMenu_Debug_LoadAPIFromFile";
-			this.StripMenu_Debug_LoadAPIFromFile.Size = new System.Drawing.Size(264, 22);
+			this.StripMenu_Debug_LoadAPIFromFile.Size = new System.Drawing.Size(278, 22);
 			this.StripMenu_Debug_LoadAPIFromFile.Text = "ファイルからAPIをロード(&L)...";
 			this.StripMenu_Debug_LoadAPIFromFile.Click += new System.EventHandler(this.StripMenu_Debug_LoadAPIFromFile_Click);
 			// 
@@ -728,7 +721,7 @@
 			this.StripMenu_Debug_LoadInitialAPI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_Debug_LoadInitialAPI.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_Debug_LoadInitialAPI.Name = "StripMenu_Debug_LoadInitialAPI";
-			this.StripMenu_Debug_LoadInitialAPI.Size = new System.Drawing.Size(264, 22);
+			this.StripMenu_Debug_LoadInitialAPI.Size = new System.Drawing.Size(278, 22);
 			this.StripMenu_Debug_LoadInitialAPI.Text = "APIリストをロード(&I)...";
 			this.StripMenu_Debug_LoadInitialAPI.Click += new System.EventHandler(this.StripMenu_Debug_LoadInitialAPI_Click);
 			// 
@@ -736,14 +729,14 @@
 			// 
 			this.toolStripSeparator8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.toolStripSeparator8.Name = "toolStripSeparator8";
-			this.toolStripSeparator8.Size = new System.Drawing.Size(261, 6);
+			this.toolStripSeparator8.Size = new System.Drawing.Size(275, 6);
 			// 
 			// StripMenu_Debug_LoadRecordFromOld
 			// 
 			this.StripMenu_Debug_LoadRecordFromOld.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_Debug_LoadRecordFromOld.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_Debug_LoadRecordFromOld.Name = "StripMenu_Debug_LoadRecordFromOld";
-			this.StripMenu_Debug_LoadRecordFromOld.Size = new System.Drawing.Size(264, 22);
+			this.StripMenu_Debug_LoadRecordFromOld.Size = new System.Drawing.Size(278, 22);
 			this.StripMenu_Debug_LoadRecordFromOld.Text = "旧 api_start2 からレコードを構築(&O)...";
 			this.StripMenu_Debug_LoadRecordFromOld.Click += new System.EventHandler(this.StripMenu_Debug_LoadRecordFromOld_Click);
 			// 
@@ -752,7 +745,7 @@
 			this.StripMenu_Debug_DeleteOldAPI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_Debug_DeleteOldAPI.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_Debug_DeleteOldAPI.Name = "StripMenu_Debug_DeleteOldAPI";
-			this.StripMenu_Debug_DeleteOldAPI.Size = new System.Drawing.Size(264, 22);
+			this.StripMenu_Debug_DeleteOldAPI.Size = new System.Drawing.Size(278, 22);
 			this.StripMenu_Debug_DeleteOldAPI.Text = "古いAPIデータを削除(&D)";
 			this.StripMenu_Debug_DeleteOldAPI.Click += new System.EventHandler(this.StripMenu_Debug_DeleteOldAPI_Click);
 			// 
@@ -761,7 +754,7 @@
 			this.StripMenu_Debug_RenameShipResource.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_Debug_RenameShipResource.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_Debug_RenameShipResource.Name = "StripMenu_Debug_RenameShipResource";
-			this.StripMenu_Debug_RenameShipResource.Size = new System.Drawing.Size(264, 22);
+			this.StripMenu_Debug_RenameShipResource.Size = new System.Drawing.Size(278, 22);
 			this.StripMenu_Debug_RenameShipResource.Text = "艦船リソースをリネーム(&R)...";
 			this.StripMenu_Debug_RenameShipResource.Click += new System.EventHandler(this.StripMenu_Debug_RenameShipResource_Click);
 			// 
@@ -770,7 +763,7 @@
 			this.StripMenu_Debug_LoadDataFromOld.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_Debug_LoadDataFromOld.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_Debug_LoadDataFromOld.Name = "StripMenu_Debug_LoadDataFromOld";
-			this.StripMenu_Debug_LoadDataFromOld.Size = new System.Drawing.Size(264, 22);
+			this.StripMenu_Debug_LoadDataFromOld.Size = new System.Drawing.Size(278, 22);
 			this.StripMenu_Debug_LoadDataFromOld.Text = "旧 api_start2から深海棲艦を復元(&A)...";
 			this.StripMenu_Debug_LoadDataFromOld.Click += new System.EventHandler(this.StripMenu_Debug_LoadDataFromOld_Click);
 			// 
@@ -781,7 +774,7 @@
             this.SeparatorWhitecap,
             this.StripMenu_Help_Version});
 			this.StripMenu_Help.Name = "StripMenu_Help";
-			this.StripMenu_Help.Size = new System.Drawing.Size(65, 20);
+			this.StripMenu_Help.Size = new System.Drawing.Size(67, 20);
 			this.StripMenu_Help.Text = "ヘルプ(&H)";
 			// 
 			// StripMenu_Help_Help
@@ -789,7 +782,7 @@
 			this.StripMenu_Help_Help.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_Help_Help.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_Help_Help.Name = "StripMenu_Help_Help";
-			this.StripMenu_Help_Help.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_Help_Help.Size = new System.Drawing.Size(178, 22);
 			this.StripMenu_Help_Help.Text = "オンラインヘルプ(&H)...";
 			this.StripMenu_Help_Help.Click += new System.EventHandler(this.StripMenu_Help_Help_Click);
 			// 
@@ -797,7 +790,7 @@
 			// 
 			this.SeparatorWhitecap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.SeparatorWhitecap.Name = "SeparatorWhitecap";
-			this.SeparatorWhitecap.Size = new System.Drawing.Size(177, 6);
+			this.SeparatorWhitecap.Size = new System.Drawing.Size(175, 6);
 			this.SeparatorWhitecap.Click += new System.EventHandler(this.SeparatorWhitecap_Click);
 			// 
 			// StripMenu_Help_Version
@@ -805,7 +798,7 @@
 			this.StripMenu_Help_Version.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.StripMenu_Help_Version.ForeColor = System.Drawing.Color.White;
 			this.StripMenu_Help_Version.Name = "StripMenu_Help_Version";
-			this.StripMenu_Help_Version.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_Help_Version.Size = new System.Drawing.Size(178, 22);
 			this.StripMenu_Help_Version.Text = "バージョン情報(&V)";
 			this.StripMenu_Help_Version.Click += new System.EventHandler(this.StripMenu_Help_Version_Click);
 			// 
@@ -824,7 +817,7 @@
 			// StripStatus_Information
 			// 
 			this.StripStatus_Information.Name = "StripStatus_Information";
-			this.StripStatus_Information.Size = new System.Drawing.Size(589, 17);
+			this.StripStatus_Information.Size = new System.Drawing.Size(587, 17);
 			this.StripStatus_Information.Spring = true;
 			this.StripStatus_Information.Text = "Now Preparing...";
 			this.StripStatus_Information.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -832,7 +825,7 @@
 			// StripStatus_Clock
 			// 
 			this.StripStatus_Clock.Name = "StripStatus_Clock";
-			this.StripStatus_Clock.Size = new System.Drawing.Size(36, 17);
+			this.StripStatus_Clock.Size = new System.Drawing.Size(38, 17);
 			this.StripStatus_Clock.Text = "Clock";
 			// 
 			// UIUpdateTimer
@@ -854,6 +847,15 @@
 			this.MainDockPanel.ShowDocumentIcon = true;
 			this.MainDockPanel.Size = new System.Drawing.Size(640, 434);
 			this.MainDockPanel.TabIndex = 0;
+			// 
+			// StripMenu_Tool_ExpChecker
+			// 
+			this.StripMenu_Tool_ExpChecker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.StripMenu_Tool_ExpChecker.ForeColor = System.Drawing.Color.White;
+			this.StripMenu_Tool_ExpChecker.Name = "StripMenu_Tool_ExpChecker";
+			this.StripMenu_Tool_ExpChecker.Size = new System.Drawing.Size(180, 22);
+			this.StripMenu_Tool_ExpChecker.Text = "必要経験値計算(&X)";
+			this.StripMenu_Tool_ExpChecker.Click += new System.EventHandler(this.StripMenu_Tool_ExpChecker_Click);
 			// 
 			// FormMain
 			// 

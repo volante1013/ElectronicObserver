@@ -1,4 +1,4 @@
-﻿namespace ElectronicObserver.Window
+namespace ElectronicObserver.Window
 {
 	partial class FormArsenal
 	{
@@ -47,7 +47,7 @@
 			this.TableArsenal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.TableArsenal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
 			this.TableArsenal.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.TableArsenal.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.TableArsenal.ForeColor = System.Drawing.Color.White;
 			this.TableArsenal.Location = new System.Drawing.Point(0, 0);
 			this.TableArsenal.Name = "TableArsenal";
 			this.TableArsenal.RowCount = 1;
@@ -60,7 +60,7 @@
 			// 
 			this.ToolTipInfo.AutoPopDelay = 30000;
 			this.ToolTipInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.ToolTipInfo.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.ToolTipInfo.ForeColor = System.Drawing.Color.White;
 			this.ToolTipInfo.InitialDelay = 500;
 			this.ToolTipInfo.ReshowDelay = 100;
 			this.ToolTipInfo.ShowAlways = true;
@@ -69,17 +69,17 @@
 			// 
 			this.MenuMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuMain_ShowShipName});
+			this.MenuMain_ShowShipName});
 			this.MenuMain.Name = "MenuMain";
-			this.MenuMain.Size = new System.Drawing.Size(147, 26);
+			this.MenuMain.Size = new System.Drawing.Size(155, 26);
 			// 
 			// MenuMain_ShowShipName
 			// 
 			this.MenuMain_ShowShipName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ShowShipName.CheckOnClick = true;
-			this.MenuMain_ShowShipName.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.MenuMain_ShowShipName.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ShowShipName.Name = "MenuMain_ShowShipName";
-			this.MenuMain_ShowShipName.Size = new System.Drawing.Size(146, 22);
+			this.MenuMain_ShowShipName.Size = new System.Drawing.Size(154, 22);
 			this.MenuMain_ShowShipName.Text = "艦名を表示(&V)";
 			this.MenuMain_ShowShipName.CheckedChanged += new System.EventHandler(this.MenuMain_ShowShipName_CheckedChanged);
 			// 
@@ -93,7 +93,7 @@
 			this.Controls.Add(this.TableArsenal);
 			this.DoubleBuffered = true;
 			this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			this.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
 			this.Name = "FormArsenal";

@@ -1,4 +1,4 @@
-﻿namespace ElectronicObserver.Window
+namespace ElectronicObserver.Window
 {
 	partial class FormBaseAirCorps
 	{
@@ -42,7 +42,7 @@
 			// 
 			this.ToolTipInfo.AutoPopDelay = 30000;
 			this.ToolTipInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.ToolTipInfo.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.ToolTipInfo.ForeColor = System.Drawing.Color.White;
 			this.ToolTipInfo.InitialDelay = 500;
 			this.ToolTipInfo.ReshowDelay = 100;
 			this.ToolTipInfo.ShowAlways = true;
@@ -69,18 +69,18 @@
 			// 
 			this.ContextMenuBaseAirCorps.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ContextMenuBaseAirCorps.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ContextMenuBaseAirCorps_CopyOrganization,
-            this.toolStripSeparator1,
-            this.ContextMenuBaseAirCorps_DisplayRelocatedEquipments});
+			this.ContextMenuBaseAirCorps_CopyOrganization,
+			this.toolStripSeparator1,
+			this.ContextMenuBaseAirCorps_DisplayRelocatedEquipments});
 			this.ContextMenuBaseAirCorps.Name = "ContextMenuBaseAirCorps";
-			this.ContextMenuBaseAirCorps.Size = new System.Drawing.Size(217, 76);
+			this.ContextMenuBaseAirCorps.Size = new System.Drawing.Size(220, 54);
 			this.ContextMenuBaseAirCorps.Opening += new System.ComponentModel.CancelEventHandler(this.ContextMenuBaseAirCorps_Opening);
 			// 
 			// ContextMenuBaseAirCorps_CopyOrganization
 			// 
 			this.ContextMenuBaseAirCorps_CopyOrganization.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuBaseAirCorps_CopyOrganization.Name = "ContextMenuBaseAirCorps_CopyOrganization";
-			this.ContextMenuBaseAirCorps_CopyOrganization.Size = new System.Drawing.Size(216, 22);
+			this.ContextMenuBaseAirCorps_CopyOrganization.Size = new System.Drawing.Size(219, 22);
 			this.ContextMenuBaseAirCorps_CopyOrganization.Text = "クリップボードにコピー(&C)";
 			this.ContextMenuBaseAirCorps_CopyOrganization.Click += new System.EventHandler(this.ContextMenuBaseAirCorps_CopyOrganization_Click);
 			// 
@@ -88,13 +88,13 @@
 			// 
 			this.toolStripSeparator1.ForeColor = System.Drawing.Color.White;
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(216, 6);
 			// 
 			// ContextMenuBaseAirCorps_DisplayRelocatedEquipments
 			// 
 			this.ContextMenuBaseAirCorps_DisplayRelocatedEquipments.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuBaseAirCorps_DisplayRelocatedEquipments.Name = "ContextMenuBaseAirCorps_DisplayRelocatedEquipments";
-			this.ContextMenuBaseAirCorps_DisplayRelocatedEquipments.Size = new System.Drawing.Size(216, 22);
+			this.ContextMenuBaseAirCorps_DisplayRelocatedEquipments.Size = new System.Drawing.Size(219, 22);
 			this.ContextMenuBaseAirCorps_DisplayRelocatedEquipments.Text = "配置転換中の装備を確認(&R)";
 			this.ContextMenuBaseAirCorps_DisplayRelocatedEquipments.Click += new System.EventHandler(this.ContextMenuBaseAirCorps_DisplayRelocatedEquipments_Click);
 			// 
@@ -109,7 +109,7 @@
 			this.Controls.Add(this.TableMember);
 			this.DoubleBuffered = true;
 			this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			this.ForeColor = System.Drawing.SystemColors.HighlightText;
+			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
