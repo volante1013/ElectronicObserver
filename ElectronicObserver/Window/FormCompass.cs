@@ -653,16 +653,16 @@ namespace ElectronicObserver.Window
 						return Color.White;
 					case 2:
 					case 3:     //夜戦・夜昼戦
-						return Color.Navy;
+						return Color.MediumSlateBlue;
 					case 4:     //航空戦
 					case 6:     //長距離空襲戦
 						return Color.LightGreen;
 					case 5:     // 敵連合
 						return Color.DarkRed;
 					case 7:     // 夜昼戦(対連合艦隊)
-						return Color.Navy;
+						return Color.MediumSlateBlue;
 					case 8:     // レーダー射撃
-						return Color.Navy;
+						return Color.MediumSlateBlue;
 				}
 			}
 
