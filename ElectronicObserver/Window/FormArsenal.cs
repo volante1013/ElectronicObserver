@@ -331,6 +331,12 @@ namespace ElectronicObserver.Window
 			e.Graphics.DrawLine(Pens.Silver, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
 		}
 
+		private void ToolTipInfo_Draw(object sender, DrawToolTipEventArgs e)
+		{
+			e.DrawBackground();
+			e.DrawBorder();
+			e.DrawText(TextFormatFlags.VerticalCenter | TextFormatFlags.LeftAndRightPadding | TextFormatFlags.TextBoxControl);
+		}
 
 
 		protected override string GetPersistString()

@@ -145,6 +145,8 @@
 			this.ToolTipInfo.InitialDelay = 500;
 			this.ToolTipInfo.ReshowDelay = 100;
 			this.ToolTipInfo.ShowAlways = true;
+			this.ToolTipInfo.OwnerDraw = true;
+			this.ToolTipInfo.Draw += new System.Windows.Forms.DrawToolTipEventHandler(ToolTipInfo_Draw);
 			// 
 			// FormFleet
 			// 
@@ -168,6 +170,12 @@
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
+		}
+
+		private void ToolTipInfo_Popup(object sender, System.Windows.Forms.PopupEventArgs e)
+		{
+			System.Diagnostics.Debug.WriteLine("ToolTipSize:" + e.ToolTipSize.ToString());
+			System.Diagnostics.Debug.WriteLine("Font:" + e.AssociatedControl.Font.Name + " Size:" + e.AssociatedControl.Font.Size);
 		}
 
 		#endregion

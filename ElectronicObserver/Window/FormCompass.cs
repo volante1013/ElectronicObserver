@@ -1268,6 +1268,12 @@ namespace ElectronicObserver.Window
 			}
 		}
 
+		private void ToolTipInfo_Draw(object sender, DrawToolTipEventArgs e)
+		{
+			e.DrawBackground();
+			e.DrawBorder();
+			e.DrawText(TextFormatFlags.VerticalCenter | TextFormatFlags.LeftAndRightPadding | TextFormatFlags.TextBoxControl);
+		}
 	}
 
 }

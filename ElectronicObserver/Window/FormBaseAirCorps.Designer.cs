@@ -46,6 +46,8 @@ namespace ElectronicObserver.Window
 			this.ToolTipInfo.InitialDelay = 500;
 			this.ToolTipInfo.ReshowDelay = 100;
 			this.ToolTipInfo.ShowAlways = true;
+			this.ToolTipInfo.OwnerDraw = true;
+			this.ToolTipInfo.Draw += new System.Windows.Forms.DrawToolTipEventHandler(ToolTipInfo_Draw);
 			// 
 			// TableMember
 			// 
