@@ -798,6 +798,7 @@ namespace ElectronicObserver.Window.Control
 						textarea.Width = sz_realstr.Width;
 
 						e.Graphics.FillRectangle(_overlayBrush, textarea);
+						aircraftColor = (aircraftColor == AircraftColorFull) ? SystemColors.ControlText : aircraftColor;
 					}
 
 					TextRenderer.DrawText(e.Graphics, slot.AircraftCurrent.ToString(), Font, textarea, aircraftColor, textformatBottomRight);
