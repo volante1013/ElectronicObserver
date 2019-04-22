@@ -163,6 +163,8 @@ namespace ElectronicObserver.Window
 
 			Utility.Logger.Add(2, SoftwareInformation.SoftwareNameJapanese + " を起動しています…");
 
+			MainDockPanel.Theme = new VS2013BlueTheme();
+			MainDockPanel.ShowDocumentIcon = true;
 
 			ResourceManager.Instance.Load();
 			RecordManager.Instance.Load();
