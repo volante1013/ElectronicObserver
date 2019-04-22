@@ -40,9 +40,10 @@
 			this.LogList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
 			| System.Windows.Forms.AnchorStyles.Left)
 			| System.Windows.Forms.AnchorStyles.Right)));
-			this.LogList.BackColor = System.Drawing.SystemColors.Control;
+			this.LogList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.LogList.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.LogList.ContextMenuStrip = this.ContextMenuLog;
+			this.LogList.ForeColor = System.Drawing.Color.White;
 			this.LogList.FormattingEnabled = true;
 			this.LogList.HorizontalScrollbar = true;
 			this.LogList.IntegralHeight = false;
@@ -55,6 +56,7 @@
 			// 
 			// ContextMenuLog
 			// 
+			this.ContextMenuLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ContextMenuLog.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.ContextMenuLog_Clear});
 			this.ContextMenuLog.Name = "ContextMenuLog";
@@ -62,6 +64,7 @@
 			// 
 			// ContextMenuLog_Clear
 			// 
+			this.ContextMenuLog_Clear.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuLog_Clear.Name = "ContextMenuLog_Clear";
 			this.ContextMenuLog_Clear.Size = new System.Drawing.Size(152, 22);
 			this.ContextMenuLog_Clear.Text = "クリア(&C)";
@@ -71,10 +74,12 @@
 			// 
 			this.AutoHidePortion = 150D;
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ClientSize = new System.Drawing.Size(300, 200);
 			this.Controls.Add(this.LogList);
 			this.DoubleBuffered = true;
 			this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
 			this.Name = "FormLog";

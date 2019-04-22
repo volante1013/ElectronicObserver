@@ -74,12 +74,12 @@
 			this.QuestView.AllowUserToAddRows = false;
 			this.QuestView.AllowUserToDeleteRows = false;
 			this.QuestView.AllowUserToResizeRows = false;
-			this.QuestView.BackgroundColor = System.Drawing.SystemColors.Control;
+			this.QuestView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.QuestView.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
 			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -92,14 +92,7 @@
 			this.QuestView_Name,
 			this.QuestView_Progress});
 			this.QuestView.ContextMenuStrip = this.MenuMain;
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Control;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.QuestView.DefaultCellStyle = dataGridViewCellStyle4;
+			this.QuestView.DefaultCellStyle = dataGridViewCellStyle1;
 			this.QuestView.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.QuestView.Location = new System.Drawing.Point(0, 0);
 			this.QuestView.MultiSelect = false;
@@ -135,6 +128,10 @@
 			// QuestView_Type
 			// 
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
 			this.QuestView_Type.DefaultCellStyle = dataGridViewCellStyle2;
 			this.QuestView_Type.HeaderText = "種";
 			this.QuestView_Type.Name = "QuestView_Type";
@@ -143,8 +140,7 @@
 			// 
 			// QuestView_Category
 			// 
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			this.QuestView_Category.DefaultCellStyle = dataGridViewCellStyle3;
+			this.QuestView_Category.DefaultCellStyle = dataGridViewCellStyle2;
 			this.QuestView_Category.HeaderText = "分類";
 			this.QuestView_Category.Name = "QuestView_Category";
 			this.QuestView_Category.ReadOnly = true;
@@ -152,6 +148,11 @@
 			// 
 			// QuestView_Name
 			// 
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+			this.QuestView_Name.DefaultCellStyle = dataGridViewCellStyle4;
 			this.QuestView_Name.FillWeight = 200F;
 			this.QuestView_Name.HeaderText = "任務名";
 			this.QuestView_Name.Name = "QuestView_Name";
@@ -162,6 +163,7 @@
 			// 
 			this.QuestView_Progress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			this.QuestView_Progress.ContextMenuStrip = this.MenuProgress;
+			this.QuestView_Progress.DefaultCellStyle = dataGridViewCellStyle4;
 			this.QuestView_Progress.HeaderText = "進捗";
 			this.QuestView_Progress.Name = "QuestView_Progress";
 			this.QuestView_Progress.ReadOnly = true;
@@ -169,6 +171,7 @@
 			// 
 			// MenuProgress
 			// 
+			this.MenuProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuProgress.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.MenuProgress_Increment,
 			this.MenuProgress_Decrement,
@@ -179,6 +182,7 @@
 			// 
 			// MenuProgress_Increment
 			// 
+			this.MenuProgress_Increment.ForeColor = System.Drawing.Color.White;
 			this.MenuProgress_Increment.Name = "MenuProgress_Increment";
 			this.MenuProgress_Increment.Size = new System.Drawing.Size(148, 22);
 			this.MenuProgress_Increment.Text = "進捗 +1(&I)";
@@ -186,6 +190,7 @@
 			// 
 			// MenuProgress_Decrement
 			// 
+			this.MenuProgress_Decrement.ForeColor = System.Drawing.Color.White;
 			this.MenuProgress_Decrement.Name = "MenuProgress_Decrement";
 			this.MenuProgress_Decrement.Size = new System.Drawing.Size(148, 22);
 			this.MenuProgress_Decrement.Text = "進捗 -1(&D)";
@@ -198,6 +203,7 @@
 			// 
 			// MenuProgress_Reset
 			// 
+			this.MenuProgress_Reset.ForeColor = System.Drawing.Color.White;
 			this.MenuProgress_Reset.Name = "MenuProgress_Reset";
 			this.MenuProgress_Reset.Size = new System.Drawing.Size(148, 22);
 			this.MenuProgress_Reset.Text = "進捗リセット(&R)";
@@ -205,6 +211,7 @@
 			// 
 			// MenuMain
 			// 
+			this.MenuMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.MenuMain_QuestFilter,
 			this.MenuMain_ColumnFilter,
@@ -224,13 +231,16 @@
 			this.MenuMain_ColumnFilter_Category,
 			this.MenuMain_ColumnFilter_Name,
 			this.MenuMain_ColumnFilter_Progress});
+			this.MenuMain_ColumnFilter.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ColumnFilter.Name = "MenuMain_ColumnFilter";
 			this.MenuMain_ColumnFilter.Size = new System.Drawing.Size(203, 22);
 			this.MenuMain_ColumnFilter.Text = "列フィルタ(&C)";
 			// 
 			// MenuMain_ColumnFilter_State
 			// 
+			this.MenuMain_ColumnFilter_State.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ColumnFilter_State.CheckOnClick = true;
+			this.MenuMain_ColumnFilter_State.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ColumnFilter_State.Name = "MenuMain_ColumnFilter_State";
 			this.MenuMain_ColumnFilter_State.Size = new System.Drawing.Size(152, 22);
 			this.MenuMain_ColumnFilter_State.Text = "遂行中(&S)";
@@ -238,7 +248,9 @@
 			// 
 			// MenuMain_ColumnFilter_Type
 			// 
+			this.MenuMain_ColumnFilter_Type.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ColumnFilter_Type.CheckOnClick = true;
+			this.MenuMain_ColumnFilter_Type.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ColumnFilter_Type.Name = "MenuMain_ColumnFilter_Type";
 			this.MenuMain_ColumnFilter_Type.Size = new System.Drawing.Size(152, 22);
 			this.MenuMain_ColumnFilter_Type.Text = "出現種別(&T)";
@@ -246,7 +258,9 @@
 			// 
 			// MenuMain_ColumnFilter_Category
 			// 
+			this.MenuMain_ColumnFilter_Category.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ColumnFilter_Category.CheckOnClick = true;
+			this.MenuMain_ColumnFilter_Category.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ColumnFilter_Category.Name = "MenuMain_ColumnFilter_Category";
 			this.MenuMain_ColumnFilter_Category.Size = new System.Drawing.Size(152, 22);
 			this.MenuMain_ColumnFilter_Category.Text = "分類(&C)";
@@ -254,7 +268,9 @@
 			// 
 			// MenuMain_ColumnFilter_Name
 			// 
+			this.MenuMain_ColumnFilter_Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ColumnFilter_Name.CheckOnClick = true;
+			this.MenuMain_ColumnFilter_Name.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ColumnFilter_Name.Name = "MenuMain_ColumnFilter_Name";
 			this.MenuMain_ColumnFilter_Name.Size = new System.Drawing.Size(152, 22);
 			this.MenuMain_ColumnFilter_Name.Text = "任務名(&N)";
@@ -262,7 +278,9 @@
 			// 
 			// MenuMain_ColumnFilter_Progress
 			// 
+			this.MenuMain_ColumnFilter_Progress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ColumnFilter_Progress.CheckOnClick = true;
+			this.MenuMain_ColumnFilter_Progress.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ColumnFilter_Progress.Name = "MenuMain_ColumnFilter_Progress";
 			this.MenuMain_ColumnFilter_Progress.Size = new System.Drawing.Size(152, 22);
 			this.MenuMain_ColumnFilter_Progress.Text = "進捗(&P)";
@@ -275,6 +293,7 @@
 			// 
 			// MenuMain_Initialize
 			// 
+			this.MenuMain_Initialize.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_Initialize.Name = "MenuMain_Initialize";
 			this.MenuMain_Initialize.Size = new System.Drawing.Size(203, 22);
 			this.MenuMain_Initialize.Text = "初期化(&I)";
@@ -283,9 +302,13 @@
 			// ToolTipInfo
 			// 
 			this.ToolTipInfo.AutoPopDelay = 30000;
+			this.ToolTipInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.ToolTipInfo.ForeColor = System.Drawing.Color.White;
 			this.ToolTipInfo.InitialDelay = 500;
 			this.ToolTipInfo.ReshowDelay = 100;
 			this.ToolTipInfo.ShowAlways = true;
+			this.ToolTipInfo.OwnerDraw = true;
+			this.ToolTipInfo.Draw += new System.Windows.Forms.DrawToolTipEventHandler(ToolTipInfo_Draw);
 			// 
 			// MenuMain_QuestFilter
 			// 
@@ -297,13 +320,16 @@
 			this.MenuMain_ShowWeekly,
 			this.MenuMain_ShowMonthly,
 			this.MenuMain_ShowOther});
+			this.MenuMain_QuestFilter.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_QuestFilter.Name = "MenuMain_QuestFilter";
 			this.MenuMain_QuestFilter.Size = new System.Drawing.Size(203, 22);
 			this.MenuMain_QuestFilter.Text = "表示フィルタ(&Q)";
 			// 
 			// MenuMain_ShowWeekly
 			// 
+			this.MenuMain_ShowWeekly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ShowWeekly.CheckOnClick = true;
+			this.MenuMain_ShowWeekly.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ShowWeekly.Name = "MenuMain_ShowWeekly";
 			this.MenuMain_ShowWeekly.Size = new System.Drawing.Size(204, 22);
 			this.MenuMain_ShowWeekly.Text = "ウィークリー任務を表示(&W)";
@@ -311,7 +337,9 @@
 			// 
 			// MenuMain_ShowDaily
 			// 
+			this.MenuMain_ShowDaily.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ShowDaily.CheckOnClick = true;
+			this.MenuMain_ShowDaily.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ShowDaily.Name = "MenuMain_ShowDaily";
 			this.MenuMain_ShowDaily.Size = new System.Drawing.Size(204, 22);
 			this.MenuMain_ShowDaily.Text = "デイリー任務を表示(&D)";
@@ -319,7 +347,9 @@
 			// 
 			// MenuMain_ShowOnce
 			// 
+			this.MenuMain_ShowOnce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ShowOnce.CheckOnClick = true;
+			this.MenuMain_ShowOnce.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ShowOnce.Name = "MenuMain_ShowOnce";
 			this.MenuMain_ShowOnce.Size = new System.Drawing.Size(204, 22);
 			this.MenuMain_ShowOnce.Text = "単発任務を表示(&O)";
@@ -327,12 +357,15 @@
 			// 
 			// toolStripSeparator2
 			// 
+			this.toolStripSeparator2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.toolStripSeparator2.Name = "toolStripSeparator2";
 			this.toolStripSeparator2.Size = new System.Drawing.Size(201, 6);
 			// 
 			// MenuMain_ShowRunningOnly
 			// 
+			this.MenuMain_ShowRunningOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ShowRunningOnly.CheckOnClick = true;
+			this.MenuMain_ShowRunningOnly.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ShowRunningOnly.Name = "MenuMain_ShowRunningOnly";
 			this.MenuMain_ShowRunningOnly.Size = new System.Drawing.Size(204, 22);
 			this.MenuMain_ShowRunningOnly.Text = "遂行中のみ表示(&R)";
@@ -340,7 +373,9 @@
 			// 
 			// MenuMain_ShowMonthly
 			// 
+			this.MenuMain_ShowMonthly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ShowMonthly.CheckOnClick = true;
+			this.MenuMain_ShowMonthly.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ShowMonthly.Name = "MenuMain_ShowMonthly";
 			this.MenuMain_ShowMonthly.Size = new System.Drawing.Size(204, 22);
 			this.MenuMain_ShowMonthly.Text = "マンスリー任務を表示(&M)";
@@ -348,7 +383,9 @@
 			// 
 			// MenuMain_ShowOther
 			// 
+			this.MenuMain_ShowOther.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMain_ShowOther.CheckOnClick = true;
+			this.MenuMain_ShowOther.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_ShowOther.Name = "MenuMain_ShowOther";
 			this.MenuMain_ShowOther.Size = new System.Drawing.Size(204, 22);
 			this.MenuMain_ShowOther.Text = "その他の任務を表示(&R)";
@@ -356,6 +393,7 @@
 			// 
 			// MenuMain_GoogleQuest
 			// 
+			this.MenuMain_GoogleQuest.ForeColor = System.Drawing.Color.White;
 			this.MenuMain_GoogleQuest.Name = "MenuMain_GoogleQuest";
 			this.MenuMain_GoogleQuest.Size = new System.Drawing.Size(203, 22);
 			this.MenuMain_GoogleQuest.Text = "任務名でGoogle検索(&G)";
@@ -370,10 +408,12 @@
 			// 
 			this.AutoHidePortion = 150D;
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ClientSize = new System.Drawing.Size(300, 200);
 			this.Controls.Add(this.QuestView);
 			this.DoubleBuffered = true;
 			this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
 			this.Name = "FormQuest";

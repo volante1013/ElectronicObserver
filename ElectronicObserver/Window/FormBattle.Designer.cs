@@ -97,9 +97,13 @@
 			// ToolTipInfo
 			// 
 			this.ToolTipInfo.AutoPopDelay = 30000;
+			this.ToolTipInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.ToolTipInfo.ForeColor = System.Drawing.Color.White;
 			this.ToolTipInfo.InitialDelay = 500;
 			this.ToolTipInfo.ReshowDelay = 100;
 			this.ToolTipInfo.ShowAlways = true;
+			this.ToolTipInfo.OwnerDraw = true;
+			this.ToolTipInfo.Draw += new System.Windows.Forms.DrawToolTipEventHandler(ToolTipInfo_Draw);
 			// 
 			// BaseLayoutPanel
 			// 
@@ -155,6 +159,7 @@
 			// 
 			// RightClickMenu
 			// 
+			this.RightClickMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.RightClickMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.RightClickMenu_ShowBattleDetail,
 			this.toolStripSeparator1,
@@ -165,6 +170,7 @@
 			// 
 			// RightClickMenu_ShowBattleDetail
 			// 
+			this.RightClickMenu_ShowBattleDetail.ForeColor = System.Drawing.Color.White;
 			this.RightClickMenu_ShowBattleDetail.Name = "RightClickMenu_ShowBattleDetail";
 			this.RightClickMenu_ShowBattleDetail.Size = new System.Drawing.Size(218, 22);
 			this.RightClickMenu_ShowBattleDetail.Text = "戦闘詳細を表示(&D)...";
@@ -172,11 +178,13 @@
 			// 
 			// toolStripSeparator1
 			// 
+			this.toolStripSeparator1.ForeColor = System.Drawing.Color.White;
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
 			this.toolStripSeparator1.Size = new System.Drawing.Size(215, 6);
 			// 
 			// RightClickMenu_ShowBattleResult
 			// 
+			this.RightClickMenu_ShowBattleResult.ForeColor = System.Drawing.Color.White;
 			this.RightClickMenu_ShowBattleResult.Name = "RightClickMenu_ShowBattleResult";
 			this.RightClickMenu_ShowBattleResult.Size = new System.Drawing.Size(218, 22);
 			this.RightClickMenu_ShowBattleResult.Text = "戦闘結果を一時的に表示(&V)";
@@ -396,11 +404,13 @@
 			// 
 			this.AutoHidePortion = 150D;
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ClientSize = new System.Drawing.Size(300, 300);
 			this.ContextMenuStrip = this.RightClickMenu;
 			this.Controls.Add(this.BaseLayoutPanel);
 			this.DoubleBuffered = true;
 			this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
 			this.Name = "FormBattle";

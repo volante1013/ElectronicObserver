@@ -70,6 +70,7 @@
 			// 
 			// ContextMenuFleet
 			// 
+			this.ContextMenuFleet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ContextMenuFleet.ImageScalingSize = new System.Drawing.Size(32, 32);
 			this.ContextMenuFleet.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.ContextMenuFleet_CopyFleet,
@@ -85,6 +86,7 @@
 			// 
 			// ContextMenuFleet_CopyFleet
 			// 
+			this.ContextMenuFleet_CopyFleet.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_CopyFleet.Name = "ContextMenuFleet_CopyFleet";
 			this.ContextMenuFleet_CopyFleet.Size = new System.Drawing.Size(227, 22);
 			this.ContextMenuFleet_CopyFleet.Text = "編成テキストをコピー(&C)";
@@ -92,6 +94,7 @@
 			// 
 			// ContextMenuFleet_CopyFleetDeckBuilder
 			// 
+			this.ContextMenuFleet_CopyFleetDeckBuilder.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_CopyFleetDeckBuilder.Name = "ContextMenuFleet_CopyFleetDeckBuilder";
 			this.ContextMenuFleet_CopyFleetDeckBuilder.Size = new System.Drawing.Size(227, 22);
 			this.ContextMenuFleet_CopyFleetDeckBuilder.Text = "編成をコピー(デッキビルダー)(&D)";
@@ -99,6 +102,7 @@
 			// 
 			// ContextMenuFleet_CopyKanmusuList
 			// 
+			this.ContextMenuFleet_CopyKanmusuList.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_CopyKanmusuList.Name = "ContextMenuFleet_CopyKanmusuList";
 			this.ContextMenuFleet_CopyKanmusuList.Size = new System.Drawing.Size(227, 22);
 			this.ContextMenuFleet_CopyKanmusuList.Text = "艦隊晒しページへコピー(&R)";
@@ -111,6 +115,7 @@
 			// 
 			// ContextMenuFleet_AntiAirDetails
 			// 
+			this.ContextMenuFleet_AntiAirDetails.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_AntiAirDetails.Name = "ContextMenuFleet_AntiAirDetails";
 			this.ContextMenuFleet_AntiAirDetails.Size = new System.Drawing.Size(227, 22);
 			this.ContextMenuFleet_AntiAirDetails.Text = "対空砲火の詳細表示(&A)";
@@ -118,6 +123,7 @@
 			// 
 			// ContextMenuFleet_Capture
 			// 
+			this.ContextMenuFleet_Capture.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_Capture.Name = "ContextMenuFleet_Capture";
 			this.ContextMenuFleet_Capture.Size = new System.Drawing.Size(227, 22);
 			this.ContextMenuFleet_Capture.Text = "この画面をキャプチャ(&S)";
@@ -125,6 +131,7 @@
 			// 
 			// ContextMenuFleet_OutputFleetImage
 			// 
+			this.ContextMenuFleet_OutputFleetImage.ForeColor = System.Drawing.Color.White;
 			this.ContextMenuFleet_OutputFleetImage.Name = "ContextMenuFleet_OutputFleetImage";
 			this.ContextMenuFleet_OutputFleetImage.Size = new System.Drawing.Size(227, 22);
 			this.ContextMenuFleet_OutputFleetImage.Text = "編成画像を出力(&I)";
@@ -133,21 +140,26 @@
 			// ToolTipInfo
 			// 
 			this.ToolTipInfo.AutoPopDelay = 30000;
+			this.ToolTipInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.ToolTipInfo.ForeColor = System.Drawing.Color.White;
 			this.ToolTipInfo.InitialDelay = 500;
 			this.ToolTipInfo.ReshowDelay = 100;
 			this.ToolTipInfo.ShowAlways = true;
+			this.ToolTipInfo.OwnerDraw = true;
+			this.ToolTipInfo.Draw += new System.Windows.Forms.DrawToolTipEventHandler(ToolTipInfo_Draw);
 			// 
 			// FormFleet
 			// 
 			this.AutoHidePortion = 150D;
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.AutoScroll = true;
-			this.BackColor = System.Drawing.SystemColors.Control;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ClientSize = new System.Drawing.Size(300, 200);
 			this.Controls.Add(this.TableFleet);
 			this.Controls.Add(this.TableMember);
 			this.DoubleBuffered = true;
 			this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
 			this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -158,6 +170,12 @@
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
+		}
+
+		private void ToolTipInfo_Popup(object sender, System.Windows.Forms.PopupEventArgs e)
+		{
+			System.Diagnostics.Debug.WriteLine("ToolTipSize:" + e.ToolTipSize.ToString());
+			System.Diagnostics.Debug.WriteLine("Font:" + e.AssociatedControl.Font.Name + " Size:" + e.AssociatedControl.Font.Size);
 		}
 
 		#endregion

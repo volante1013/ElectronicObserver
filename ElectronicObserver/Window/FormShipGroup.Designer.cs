@@ -33,11 +33,6 @@
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.ShipView = new System.Windows.Forms.DataGridView();
 			this.ShipView_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ShipView_ShipType = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,7 +133,7 @@
 			this.ShipView.AllowUserToDeleteRows = false;
 			this.ShipView.AllowUserToOrderColumns = true;
 			this.ShipView.AllowUserToResizeRows = false;
-			this.ShipView.BackgroundColor = System.Drawing.SystemColors.Control;
+			this.ShipView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ShipView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 			this.ShipView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
 			this.ShipView_ID,
@@ -202,9 +197,9 @@
 			this.ShipView_SallyArea});
 			this.ShipView.ContextMenuStrip = this.MenuMember;
 			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-			dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			dataGridViewCellStyle9.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-			dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
 			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
 			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -214,6 +209,9 @@
 			this.ShipView.Name = "ShipView";
 			this.ShipView.ReadOnly = true;
 			this.ShipView.RowHeadersVisible = false;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+			this.ShipView.RowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.ShipView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.ShipView.Size = new System.Drawing.Size(300, 134);
 			this.ShipView.TabIndex = 0;
@@ -226,6 +224,9 @@
 			// 
 			// ShipView_ID
 			// 
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+			this.ShipView_ID.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_ID.HeaderText = "ID";
 			this.ShipView_ID.Name = "ShipView_ID";
 			this.ShipView_ID.ReadOnly = true;
@@ -234,6 +235,8 @@
 			// ShipView_ShipType
 			// 
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
 			this.ShipView_ShipType.DefaultCellStyle = dataGridViewCellStyle2;
 			this.ShipView_ShipType.HeaderText = "艦種";
 			this.ShipView_ShipType.Name = "ShipView_ShipType";
@@ -242,14 +245,14 @@
 			// 
 			// ShipView_Name
 			// 
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			this.ShipView_Name.DefaultCellStyle = dataGridViewCellStyle3;
+			this.ShipView_Name.DefaultCellStyle = dataGridViewCellStyle2;
 			this.ShipView_Name.HeaderText = "艦名";
 			this.ShipView_Name.Name = "ShipView_Name";
 			this.ShipView_Name.ReadOnly = true;
 			// 
 			// ShipView_Level
 			// 
+			this.ShipView_Level.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Level.HeaderText = "Lv";
 			this.ShipView_Level.Name = "ShipView_Level";
 			this.ShipView_Level.ReadOnly = true;
@@ -257,6 +260,7 @@
 			// 
 			// ShipView_Exp
 			// 
+			this.ShipView_Exp.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Exp.HeaderText = "Exp";
 			this.ShipView_Exp.Name = "ShipView_Exp";
 			this.ShipView_Exp.ReadOnly = true;
@@ -264,6 +268,7 @@
 			// 
 			// ShipView_Next
 			// 
+			this.ShipView_Next.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Next.HeaderText = "next";
 			this.ShipView_Next.Name = "ShipView_Next";
 			this.ShipView_Next.ReadOnly = true;
@@ -271,6 +276,7 @@
 			// 
 			// ShipView_NextRemodel
 			// 
+			this.ShipView_NextRemodel.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_NextRemodel.HeaderText = "改装まで";
 			this.ShipView_NextRemodel.Name = "ShipView_NextRemodel";
 			this.ShipView_NextRemodel.ReadOnly = true;
@@ -278,6 +284,7 @@
 			// 
 			// ShipView_HP
 			// 
+			this.ShipView_HP.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_HP.HeaderText = "HP";
 			this.ShipView_HP.Name = "ShipView_HP";
 			this.ShipView_HP.ReadOnly = true;
@@ -285,6 +292,7 @@
 			// 
 			// ShipView_Condition
 			// 
+			this.ShipView_Condition.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Condition.HeaderText = "Cond";
 			this.ShipView_Condition.Name = "ShipView_Condition";
 			this.ShipView_Condition.ReadOnly = true;
@@ -292,6 +300,7 @@
 			// 
 			// ShipView_Fuel
 			// 
+			this.ShipView_Fuel.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Fuel.HeaderText = "燃料";
 			this.ShipView_Fuel.Name = "ShipView_Fuel";
 			this.ShipView_Fuel.ReadOnly = true;
@@ -299,6 +308,7 @@
 			// 
 			// ShipView_Ammo
 			// 
+			this.ShipView_Ammo.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Ammo.HeaderText = "弾薬";
 			this.ShipView_Ammo.Name = "ShipView_Ammo";
 			this.ShipView_Ammo.ReadOnly = true;
@@ -306,8 +316,7 @@
 			// 
 			// ShipView_Slot1
 			// 
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			this.ShipView_Slot1.DefaultCellStyle = dataGridViewCellStyle4;
+			this.ShipView_Slot1.DefaultCellStyle = dataGridViewCellStyle2;
 			this.ShipView_Slot1.HeaderText = "装備1";
 			this.ShipView_Slot1.Name = "ShipView_Slot1";
 			this.ShipView_Slot1.ReadOnly = true;
@@ -316,8 +325,7 @@
 			// 
 			// ShipView_Slot2
 			// 
-			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			this.ShipView_Slot2.DefaultCellStyle = dataGridViewCellStyle5;
+			this.ShipView_Slot2.DefaultCellStyle = dataGridViewCellStyle2;
 			this.ShipView_Slot2.HeaderText = "装備2";
 			this.ShipView_Slot2.Name = "ShipView_Slot2";
 			this.ShipView_Slot2.ReadOnly = true;
@@ -326,8 +334,7 @@
 			// 
 			// ShipView_Slot3
 			// 
-			dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			this.ShipView_Slot3.DefaultCellStyle = dataGridViewCellStyle6;
+			this.ShipView_Slot3.DefaultCellStyle = dataGridViewCellStyle2;
 			this.ShipView_Slot3.HeaderText = "装備3";
 			this.ShipView_Slot3.Name = "ShipView_Slot3";
 			this.ShipView_Slot3.ReadOnly = true;
@@ -336,8 +343,7 @@
 			// 
 			// ShipView_Slot4
 			// 
-			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			this.ShipView_Slot4.DefaultCellStyle = dataGridViewCellStyle7;
+			this.ShipView_Slot4.DefaultCellStyle = dataGridViewCellStyle2;
 			this.ShipView_Slot4.HeaderText = "装備4";
 			this.ShipView_Slot4.Name = "ShipView_Slot4";
 			this.ShipView_Slot4.ReadOnly = true;
@@ -346,8 +352,7 @@
 			// 
 			// ShipView_Slot5
 			// 
-			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			this.ShipView_Slot5.DefaultCellStyle = dataGridViewCellStyle8;
+			this.ShipView_Slot5.DefaultCellStyle = dataGridViewCellStyle2;
 			this.ShipView_Slot5.HeaderText = "装備5";
 			this.ShipView_Slot5.Name = "ShipView_Slot5";
 			this.ShipView_Slot5.ReadOnly = true;
@@ -356,6 +361,7 @@
 			// 
 			// ShipView_ExpansionSlot
 			// 
+			this.ShipView_ExpansionSlot.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_ExpansionSlot.HeaderText = "補強装備";
 			this.ShipView_ExpansionSlot.Name = "ShipView_ExpansionSlot";
 			this.ShipView_ExpansionSlot.ReadOnly = true;
@@ -364,6 +370,7 @@
 			// 
 			// ShipView_Aircraft1
 			// 
+			this.ShipView_Aircraft1.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Aircraft1.HeaderText = "搭載1";
 			this.ShipView_Aircraft1.Name = "ShipView_Aircraft1";
 			this.ShipView_Aircraft1.ReadOnly = true;
@@ -371,6 +378,7 @@
 			// 
 			// ShipView_Aircraft2
 			// 
+			this.ShipView_Aircraft2.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Aircraft2.HeaderText = "搭載2";
 			this.ShipView_Aircraft2.Name = "ShipView_Aircraft2";
 			this.ShipView_Aircraft2.ReadOnly = true;
@@ -378,6 +386,7 @@
 			// 
 			// ShipView_Aircraft3
 			// 
+			this.ShipView_Aircraft3.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Aircraft3.HeaderText = "搭載3";
 			this.ShipView_Aircraft3.Name = "ShipView_Aircraft3";
 			this.ShipView_Aircraft3.ReadOnly = true;
@@ -385,6 +394,7 @@
 			// 
 			// ShipView_Aircraft4
 			// 
+			this.ShipView_Aircraft4.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Aircraft4.HeaderText = "搭載4";
 			this.ShipView_Aircraft4.Name = "ShipView_Aircraft4";
 			this.ShipView_Aircraft4.ReadOnly = true;
@@ -392,6 +402,7 @@
 			// 
 			// ShipView_Aircraft5
 			// 
+			this.ShipView_Aircraft5.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Aircraft5.HeaderText = "搭載5";
 			this.ShipView_Aircraft5.Name = "ShipView_Aircraft5";
 			this.ShipView_Aircraft5.ReadOnly = true;
@@ -399,6 +410,7 @@
 			// 
 			// ShipView_AircraftTotal
 			// 
+			this.ShipView_AircraftTotal.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_AircraftTotal.HeaderText = "搭載合計";
 			this.ShipView_AircraftTotal.Name = "ShipView_AircraftTotal";
 			this.ShipView_AircraftTotal.ReadOnly = true;
@@ -406,6 +418,7 @@
 			// 
 			// ShipView_Fleet
 			// 
+			this.ShipView_Fleet.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Fleet.HeaderText = "艦隊";
 			this.ShipView_Fleet.Name = "ShipView_Fleet";
 			this.ShipView_Fleet.ReadOnly = true;
@@ -413,6 +426,7 @@
 			// 
 			// ShipView_RepairTime
 			// 
+			this.ShipView_RepairTime.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_RepairTime.HeaderText = "入渠時間";
 			this.ShipView_RepairTime.Name = "ShipView_RepairTime";
 			this.ShipView_RepairTime.ReadOnly = true;
@@ -420,6 +434,7 @@
 			// 
 			// ShipView_RepairSteel
 			// 
+			this.ShipView_RepairSteel.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_RepairSteel.HeaderText = "入渠鋼材";
 			this.ShipView_RepairSteel.Name = "ShipView_RepairSteel";
 			this.ShipView_RepairSteel.ReadOnly = true;
@@ -427,6 +442,7 @@
 			// 
 			// ShipView_RepairFuel
 			// 
+			this.ShipView_RepairFuel.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_RepairFuel.HeaderText = "入渠燃料";
 			this.ShipView_RepairFuel.Name = "ShipView_RepairFuel";
 			this.ShipView_RepairFuel.ReadOnly = true;
@@ -434,6 +450,7 @@
 			// 
 			// ShipView_Firepower
 			// 
+			this.ShipView_Firepower.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Firepower.HeaderText = "火力";
 			this.ShipView_Firepower.Name = "ShipView_Firepower";
 			this.ShipView_Firepower.ReadOnly = true;
@@ -441,6 +458,7 @@
 			// 
 			// ShipView_FirepowerRemain
 			// 
+			this.ShipView_FirepowerRemain.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_FirepowerRemain.HeaderText = "火力改修";
 			this.ShipView_FirepowerRemain.Name = "ShipView_FirepowerRemain";
 			this.ShipView_FirepowerRemain.ReadOnly = true;
@@ -448,6 +466,7 @@
 			// 
 			// ShipView_FirepowerTotal
 			// 
+			this.ShipView_FirepowerTotal.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_FirepowerTotal.HeaderText = "火力合計";
 			this.ShipView_FirepowerTotal.Name = "ShipView_FirepowerTotal";
 			this.ShipView_FirepowerTotal.ReadOnly = true;
@@ -455,6 +474,7 @@
 			// 
 			// ShipView_Torpedo
 			// 
+			this.ShipView_Torpedo.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Torpedo.HeaderText = "雷装";
 			this.ShipView_Torpedo.Name = "ShipView_Torpedo";
 			this.ShipView_Torpedo.ReadOnly = true;
@@ -462,6 +482,7 @@
 			// 
 			// ShipView_TorpedoRemain
 			// 
+			this.ShipView_TorpedoRemain.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_TorpedoRemain.HeaderText = "雷装改修";
 			this.ShipView_TorpedoRemain.Name = "ShipView_TorpedoRemain";
 			this.ShipView_TorpedoRemain.ReadOnly = true;
@@ -469,6 +490,7 @@
 			// 
 			// ShipView_TorpedoTotal
 			// 
+			this.ShipView_TorpedoTotal.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_TorpedoTotal.HeaderText = "雷装合計";
 			this.ShipView_TorpedoTotal.Name = "ShipView_TorpedoTotal";
 			this.ShipView_TorpedoTotal.ReadOnly = true;
@@ -476,6 +498,7 @@
 			// 
 			// ShipView_AA
 			// 
+			this.ShipView_AA.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_AA.HeaderText = "対空";
 			this.ShipView_AA.Name = "ShipView_AA";
 			this.ShipView_AA.ReadOnly = true;
@@ -483,6 +506,7 @@
 			// 
 			// ShipView_AARemain
 			// 
+			this.ShipView_AARemain.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_AARemain.HeaderText = "対空改修";
 			this.ShipView_AARemain.Name = "ShipView_AARemain";
 			this.ShipView_AARemain.ReadOnly = true;
@@ -490,6 +514,7 @@
 			// 
 			// ShipView_AATotal
 			// 
+			this.ShipView_AATotal.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_AATotal.HeaderText = "対空合計";
 			this.ShipView_AATotal.Name = "ShipView_AATotal";
 			this.ShipView_AATotal.ReadOnly = true;
@@ -497,6 +522,7 @@
 			// 
 			// ShipView_Armor
 			// 
+			this.ShipView_Armor.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Armor.HeaderText = "装甲";
 			this.ShipView_Armor.Name = "ShipView_Armor";
 			this.ShipView_Armor.ReadOnly = true;
@@ -504,6 +530,7 @@
 			// 
 			// ShipView_ArmorRemain
 			// 
+			this.ShipView_ArmorRemain.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_ArmorRemain.HeaderText = "装甲改修";
 			this.ShipView_ArmorRemain.Name = "ShipView_ArmorRemain";
 			this.ShipView_ArmorRemain.ReadOnly = true;
@@ -511,6 +538,7 @@
 			// 
 			// ShipView_ArmorTotal
 			// 
+			this.ShipView_ArmorTotal.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_ArmorTotal.HeaderText = "装甲合計";
 			this.ShipView_ArmorTotal.Name = "ShipView_ArmorTotal";
 			this.ShipView_ArmorTotal.ReadOnly = true;
@@ -518,6 +546,7 @@
 			// 
 			// ShipView_ASW
 			// 
+			this.ShipView_ASW.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_ASW.HeaderText = "対潜";
 			this.ShipView_ASW.Name = "ShipView_ASW";
 			this.ShipView_ASW.ReadOnly = true;
@@ -525,6 +554,7 @@
 			// 
 			// ShipView_ASWTotal
 			// 
+			this.ShipView_ASWTotal.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_ASWTotal.HeaderText = "対潜合計";
 			this.ShipView_ASWTotal.Name = "ShipView_ASWTotal";
 			this.ShipView_ASWTotal.ReadOnly = true;
@@ -532,6 +562,7 @@
 			// 
 			// ShipView_Evasion
 			// 
+			this.ShipView_Evasion.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Evasion.HeaderText = "回避";
 			this.ShipView_Evasion.Name = "ShipView_Evasion";
 			this.ShipView_Evasion.ReadOnly = true;
@@ -539,6 +570,7 @@
 			// 
 			// ShipView_EvasionTotal
 			// 
+			this.ShipView_EvasionTotal.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_EvasionTotal.HeaderText = "回避合計";
 			this.ShipView_EvasionTotal.Name = "ShipView_EvasionTotal";
 			this.ShipView_EvasionTotal.ReadOnly = true;
@@ -546,6 +578,7 @@
 			// 
 			// ShipView_LOS
 			// 
+			this.ShipView_LOS.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_LOS.HeaderText = "索敵";
 			this.ShipView_LOS.Name = "ShipView_LOS";
 			this.ShipView_LOS.ReadOnly = true;
@@ -553,6 +586,7 @@
 			// 
 			// ShipView_LOSTotal
 			// 
+			this.ShipView_LOSTotal.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_LOSTotal.HeaderText = "索敵合計";
 			this.ShipView_LOSTotal.Name = "ShipView_LOSTotal";
 			this.ShipView_LOSTotal.ReadOnly = true;
@@ -560,6 +594,7 @@
 			// 
 			// ShipView_Luck
 			// 
+			this.ShipView_Luck.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Luck.HeaderText = "運";
 			this.ShipView_Luck.Name = "ShipView_Luck";
 			this.ShipView_Luck.ReadOnly = true;
@@ -567,6 +602,7 @@
 			// 
 			// ShipView_LuckRemain
 			// 
+			this.ShipView_LuckRemain.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_LuckRemain.HeaderText = "運改修";
 			this.ShipView_LuckRemain.Name = "ShipView_LuckRemain";
 			this.ShipView_LuckRemain.ReadOnly = true;
@@ -574,6 +610,7 @@
 			// 
 			// ShipView_LuckTotal
 			// 
+			this.ShipView_LuckTotal.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_LuckTotal.HeaderText = "運合計";
 			this.ShipView_LuckTotal.Name = "ShipView_LuckTotal";
 			this.ShipView_LuckTotal.ReadOnly = true;
@@ -581,6 +618,7 @@
 			// 
 			// ShipView_BomberTotal
 			// 
+			this.ShipView_BomberTotal.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_BomberTotal.HeaderText = "爆装合計";
 			this.ShipView_BomberTotal.Name = "ShipView_BomberTotal";
 			this.ShipView_BomberTotal.ReadOnly = true;
@@ -588,6 +626,7 @@
 			// 
 			// ShipView_Speed
 			// 
+			this.ShipView_Speed.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Speed.HeaderText = "速力";
 			this.ShipView_Speed.Name = "ShipView_Speed";
 			this.ShipView_Speed.ReadOnly = true;
@@ -595,6 +634,7 @@
 			// 
 			// ShipView_Range
 			// 
+			this.ShipView_Range.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Range.HeaderText = "射程";
 			this.ShipView_Range.Name = "ShipView_Range";
 			this.ShipView_Range.ReadOnly = true;
@@ -602,6 +642,7 @@
 			// 
 			// ShipView_AirBattlePower
 			// 
+			this.ShipView_AirBattlePower.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_AirBattlePower.HeaderText = "航空威力";
 			this.ShipView_AirBattlePower.Name = "ShipView_AirBattlePower";
 			this.ShipView_AirBattlePower.ReadOnly = true;
@@ -609,6 +650,7 @@
 			// 
 			// ShipView_ShellingPower
 			// 
+			this.ShipView_ShellingPower.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_ShellingPower.HeaderText = "砲撃威力";
 			this.ShipView_ShellingPower.Name = "ShipView_ShellingPower";
 			this.ShipView_ShellingPower.ReadOnly = true;
@@ -616,6 +658,7 @@
 			// 
 			// ShipView_AircraftPower
 			// 
+			this.ShipView_AircraftPower.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_AircraftPower.HeaderText = "空撃威力";
 			this.ShipView_AircraftPower.Name = "ShipView_AircraftPower";
 			this.ShipView_AircraftPower.ReadOnly = true;
@@ -623,6 +666,7 @@
 			// 
 			// ShipView_AntiSubmarinePower
 			// 
+			this.ShipView_AntiSubmarinePower.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_AntiSubmarinePower.HeaderText = "対潜威力";
 			this.ShipView_AntiSubmarinePower.Name = "ShipView_AntiSubmarinePower";
 			this.ShipView_AntiSubmarinePower.ReadOnly = true;
@@ -630,6 +674,7 @@
 			// 
 			// ShipView_TorpedoPower
 			// 
+			this.ShipView_TorpedoPower.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_TorpedoPower.HeaderText = "雷撃威力";
 			this.ShipView_TorpedoPower.Name = "ShipView_TorpedoPower";
 			this.ShipView_TorpedoPower.ReadOnly = true;
@@ -637,6 +682,7 @@
 			// 
 			// ShipView_NightBattlePower
 			// 
+			this.ShipView_NightBattlePower.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_NightBattlePower.HeaderText = "夜戦威力";
 			this.ShipView_NightBattlePower.Name = "ShipView_NightBattlePower";
 			this.ShipView_NightBattlePower.ReadOnly = true;
@@ -644,6 +690,7 @@
 			// 
 			// ShipView_Locked
 			// 
+			this.ShipView_Locked.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_Locked.HeaderText = "ロック";
 			this.ShipView_Locked.Name = "ShipView_Locked";
 			this.ShipView_Locked.ReadOnly = true;
@@ -651,6 +698,7 @@
 			// 
 			// ShipView_SallyArea
 			// 
+			this.ShipView_SallyArea.DefaultCellStyle = dataGridViewCellStyle3;
 			this.ShipView_SallyArea.HeaderText = "出撃先";
 			this.ShipView_SallyArea.Name = "ShipView_SallyArea";
 			this.ShipView_SallyArea.ReadOnly = true;
@@ -658,6 +706,7 @@
 			// 
 			// MenuMember
 			// 
+			this.MenuMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuMember.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.MenuMember_AddToGroup,
 			this.MenuMember_CreateGroup,
@@ -674,6 +723,7 @@
 			// 
 			// MenuMember_AddToGroup
 			// 
+			this.MenuMember_AddToGroup.ForeColor = System.Drawing.Color.White;
 			this.MenuMember_AddToGroup.Name = "MenuMember_AddToGroup";
 			this.MenuMember_AddToGroup.Size = new System.Drawing.Size(201, 22);
 			this.MenuMember_AddToGroup.Text = "グループへ追加(&A)...";
@@ -681,6 +731,7 @@
 			// 
 			// MenuMember_CreateGroup
 			// 
+			this.MenuMember_CreateGroup.ForeColor = System.Drawing.Color.White;
 			this.MenuMember_CreateGroup.Name = "MenuMember_CreateGroup";
 			this.MenuMember_CreateGroup.Size = new System.Drawing.Size(201, 22);
 			this.MenuMember_CreateGroup.Text = "新規グループの作成(&N)...";
@@ -688,6 +739,7 @@
 			// 
 			// MenuMember_Exclude
 			// 
+			this.MenuMember_Exclude.ForeColor = System.Drawing.Color.White;
 			this.MenuMember_Exclude.Name = "MenuMember_Exclude";
 			this.MenuMember_Exclude.Size = new System.Drawing.Size(201, 22);
 			this.MenuMember_Exclude.Text = "除外(&E)";
@@ -700,6 +752,7 @@
 			// 
 			// MenuMember_Filter
 			// 
+			this.MenuMember_Filter.ForeColor = System.Drawing.Color.White;
 			this.MenuMember_Filter.Name = "MenuMember_Filter";
 			this.MenuMember_Filter.Size = new System.Drawing.Size(201, 22);
 			this.MenuMember_Filter.Text = "フィルタ設定(&F)...";
@@ -707,6 +760,7 @@
 			// 
 			// MenuMember_ColumnFilter
 			// 
+			this.MenuMember_ColumnFilter.ForeColor = System.Drawing.Color.White;
 			this.MenuMember_ColumnFilter.Name = "MenuMember_ColumnFilter";
 			this.MenuMember_ColumnFilter.Size = new System.Drawing.Size(201, 22);
 			this.MenuMember_ColumnFilter.Text = "列の表示設定(&C)...";
@@ -714,6 +768,7 @@
 			// 
 			// MenuMember_SortOrder
 			// 
+			this.MenuMember_SortOrder.ForeColor = System.Drawing.Color.White;
 			this.MenuMember_SortOrder.Name = "MenuMember_SortOrder";
 			this.MenuMember_SortOrder.Size = new System.Drawing.Size(201, 22);
 			this.MenuMember_SortOrder.Text = "自動ソート設定(&S)...";
@@ -726,6 +781,7 @@
 			// 
 			// MenuMember_CSVOutput
 			// 
+			this.MenuMember_CSVOutput.ForeColor = System.Drawing.Color.White;
 			this.MenuMember_CSVOutput.Name = "MenuMember_CSVOutput";
 			this.MenuMember_CSVOutput.Size = new System.Drawing.Size(201, 22);
 			this.MenuMember_CSVOutput.Text = "CSV出力(&O)...";
@@ -733,6 +789,7 @@
 			// 
 			// MenuGroup
 			// 
+			this.MenuGroup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.MenuGroup.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.MenuGroup_Add,
 			this.MenuGroup_Copy,
@@ -747,6 +804,7 @@
 			// 
 			// MenuGroup_Add
 			// 
+			this.MenuGroup_Add.ForeColor = System.Drawing.Color.White;
 			this.MenuGroup_Add.Name = "MenuGroup_Add";
 			this.MenuGroup_Add.Size = new System.Drawing.Size(191, 22);
 			this.MenuGroup_Add.Text = "グループを追加(&A)";
@@ -754,6 +812,7 @@
 			// 
 			// MenuGroup_Copy
 			// 
+			this.MenuGroup_Copy.ForeColor = System.Drawing.Color.White;
 			this.MenuGroup_Copy.Name = "MenuGroup_Copy";
 			this.MenuGroup_Copy.Size = new System.Drawing.Size(191, 22);
 			this.MenuGroup_Copy.Text = "グループをコピー(&C)";
@@ -761,6 +820,7 @@
 			// 
 			// MenuGroup_Rename
 			// 
+			this.MenuGroup_Rename.ForeColor = System.Drawing.Color.White;
 			this.MenuGroup_Rename.Name = "MenuGroup_Rename";
 			this.MenuGroup_Rename.Size = new System.Drawing.Size(191, 22);
 			this.MenuGroup_Rename.Text = "グループ名の変更(&R)...";
@@ -768,6 +828,7 @@
 			// 
 			// MenuGroup_Delete
 			// 
+			this.MenuGroup_Delete.ForeColor = System.Drawing.Color.White;
 			this.MenuGroup_Delete.Name = "MenuGroup_Delete";
 			this.MenuGroup_Delete.Size = new System.Drawing.Size(191, 22);
 			this.MenuGroup_Delete.Text = "グループを削除(&D)";
@@ -781,6 +842,7 @@
 			// MenuGroup_AutoUpdate
 			// 
 			this.MenuGroup_AutoUpdate.CheckOnClick = true;
+			this.MenuGroup_AutoUpdate.ForeColor = System.Drawing.Color.White;
 			this.MenuGroup_AutoUpdate.Name = "MenuGroup_AutoUpdate";
 			this.MenuGroup_AutoUpdate.Size = new System.Drawing.Size(191, 22);
 			this.MenuGroup_AutoUpdate.Text = "自動更新する";
@@ -790,6 +852,7 @@
 			this.MenuGroup_ShowStatusBar.Checked = true;
 			this.MenuGroup_ShowStatusBar.CheckOnClick = true;
 			this.MenuGroup_ShowStatusBar.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.MenuGroup_ShowStatusBar.ForeColor = System.Drawing.Color.White;
 			this.MenuGroup_ShowStatusBar.Name = "MenuGroup_ShowStatusBar";
 			this.MenuGroup_ShowStatusBar.Size = new System.Drawing.Size(191, 22);
 			this.MenuGroup_ShowStatusBar.Text = "ステータスバーを表示する";
@@ -845,6 +908,7 @@
 			this.StatusBar.SizingGrip = false;
 			this.StatusBar.TabIndex = 1;
 			this.StatusBar.Text = "statusStrip1";
+			this.StatusBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			// 
 			// Status_ShipCount
 			// 
@@ -865,10 +929,12 @@
 			// 
 			this.AutoHidePortion = 150D;
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ClientSize = new System.Drawing.Size(300, 200);
 			this.Controls.Add(this.splitContainer1);
 			this.DoubleBuffered = true;
 			this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
 			this.Name = "FormShipGroup";

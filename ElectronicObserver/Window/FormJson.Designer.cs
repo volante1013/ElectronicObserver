@@ -85,9 +85,11 @@
 			// 
 			// JsonTreeView
 			// 
+			this.JsonTreeView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.JsonTreeView.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.JsonTreeView.ContextMenuStrip = this.TreeContextMenu;
 			this.JsonTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.JsonTreeView.ForeColor = System.Drawing.Color.White;
 			this.JsonTreeView.Location = new System.Drawing.Point(3, 3);
 			this.JsonTreeView.Margin = new System.Windows.Forms.Padding(0);
 			this.JsonTreeView.Name = "JsonTreeView";
@@ -100,6 +102,7 @@
 			// 
 			// TreeContextMenu
 			// 
+			this.TreeContextMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.TreeContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TreeContextMenu_Expand,
             this.TreeContextMenu_Shrink,
@@ -114,6 +117,7 @@
 			// 
 			// TreeContextMenu_Expand
 			// 
+			this.TreeContextMenu_Expand.ForeColor = System.Drawing.Color.White;
 			this.TreeContextMenu_Expand.Name = "TreeContextMenu_Expand";
 			this.TreeContextMenu_Expand.Size = new System.Drawing.Size(235, 22);
 			this.TreeContextMenu_Expand.Text = "全て展開";
@@ -121,6 +125,7 @@
 			// 
 			// TreeContextMenu_Shrink
 			// 
+			this.TreeContextMenu_Shrink.ForeColor = System.Drawing.Color.White;
 			this.TreeContextMenu_Shrink.Name = "TreeContextMenu_Shrink";
 			this.TreeContextMenu_Shrink.Size = new System.Drawing.Size(235, 22);
 			this.TreeContextMenu_Shrink.Text = "全て格納";
@@ -128,6 +133,7 @@
 			// 
 			// TreeContextMenu_ShrinkParent
 			// 
+			this.TreeContextMenu_ShrinkParent.ForeColor = System.Drawing.Color.White;
 			this.TreeContextMenu_ShrinkParent.Name = "TreeContextMenu_ShrinkParent";
 			this.TreeContextMenu_ShrinkParent.Size = new System.Drawing.Size(235, 22);
 			this.TreeContextMenu_ShrinkParent.Text = "親ノードを格納";
@@ -140,6 +146,7 @@
 			// 
 			// TreeContextMenu_OutputCSV
 			// 
+			this.TreeContextMenu_OutputCSV.ForeColor = System.Drawing.Color.White;
 			this.TreeContextMenu_OutputCSV.Name = "TreeContextMenu_OutputCSV";
 			this.TreeContextMenu_OutputCSV.Size = new System.Drawing.Size(235, 22);
 			this.TreeContextMenu_OutputCSV.Text = "このノードをCSVに出力...";
@@ -147,6 +154,7 @@
 			// 
 			// TreeContextMenu_CopyToClipboard
 			// 
+			this.TreeContextMenu_CopyToClipboard.ForeColor = System.Drawing.Color.White;
 			this.TreeContextMenu_CopyToClipboard.Name = "TreeContextMenu_CopyToClipboard";
 			this.TreeContextMenu_CopyToClipboard.Size = new System.Drawing.Size(235, 22);
 			this.TreeContextMenu_CopyToClipboard.Text = "このノードをクリップボードへコピー";
@@ -165,7 +173,9 @@
 			// 
 			// JsonRawData
 			// 
+			this.JsonRawData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.JsonRawData.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.JsonRawData.ForeColor = System.Drawing.Color.White;
 			this.JsonRawData.Location = new System.Drawing.Point(3, 3);
 			this.JsonRawData.MaxLength = 0;
 			this.JsonRawData.Multiline = true;
@@ -178,6 +188,7 @@
 			// 
 			// tabPage3
 			// 
+			this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.tabPage3.Controls.Add(this.label3);
 			this.tabPage3.Controls.Add(this.label2);
 			this.tabPage3.Controls.Add(this.UpdatesTree);
@@ -190,7 +201,7 @@
 			this.tabPage3.Size = new System.Drawing.Size(292, 174);
 			this.tabPage3.TabIndex = 2;
 			this.tabPage3.Text = "Config";
-			this.tabPage3.UseVisualStyleBackColor = true;
+			//this.tabPage3.UseVisualStyleBackColor = true;
 			// 
 			// label3
 			// 
@@ -261,6 +272,7 @@
 			// 
 			// TreeContextMenu_CopyAsDocument
 			// 
+			this.TreeContextMenu_CopyAsDocument.ForeColor = System.Drawing.Color.White;
 			this.TreeContextMenu_CopyAsDocument.Name = "TreeContextMenu_CopyAsDocument";
 			this.TreeContextMenu_CopyAsDocument.Size = new System.Drawing.Size(235, 22);
 			this.TreeContextMenu_CopyAsDocument.Text = "このノードをドキュメント化してコピー";
@@ -270,9 +282,11 @@
 			// 
 			this.AutoHidePortion = 150D;
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.ClientSize = new System.Drawing.Size(300, 200);
 			this.Controls.Add(this.tabControl1);
 			this.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+			this.ForeColor = System.Drawing.Color.White;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.HideOnClose = true;
 			this.Name = "FormJson";

@@ -29,7 +29,7 @@ namespace ElectronicObserver.Window
 		private readonly Color TabActiveColor = Color.FromArgb(0xFF, 0xFF, 0xCC);
 
 		/// <summary>タブ背景色(非アクティブ)</summary>
-		private readonly Color TabInactiveColor = SystemColors.Control;
+		private readonly Color TabInactiveColor = Color.FromArgb(64, 64, 64);
 
 
 
@@ -78,9 +78,9 @@ namespace ElectronicObserver.Window
 			CSDefaultLeft = new DataGridViewCellStyle
 			{
 				Alignment = DataGridViewContentAlignment.MiddleLeft,
-				BackColor = SystemColors.Control,
+				BackColor = Color.FromArgb(64,64,64),
 				Font = Font,
-				ForeColor = SystemColors.ControlText,
+				ForeColor = Color.White,
 				SelectionBackColor = Color.FromArgb(0xFF, 0xFF, 0xCC),
 				SelectionForeColor = SystemColors.ControlText,
 				WrapMode = DataGridViewTriState.False
@@ -99,18 +99,22 @@ namespace ElectronicObserver.Window
 			CSRedRight = new DataGridViewCellStyle(CSDefaultRight);
 			CSRedRight.BackColor =
 			CSRedRight.SelectionBackColor = CellColorRed;
+			CSRedRight.ForeColor = SystemColors.ControlText;
 
 			CSOrangeRight = new DataGridViewCellStyle(CSDefaultRight);
 			CSOrangeRight.BackColor =
 			CSOrangeRight.SelectionBackColor = CellColorOrange;
+			CSOrangeRight.ForeColor = SystemColors.ControlText;
 
 			CSYellowRight = new DataGridViewCellStyle(CSDefaultRight);
 			CSYellowRight.BackColor =
 			CSYellowRight.SelectionBackColor = CellColorYellow;
+			CSYellowRight.ForeColor = SystemColors.ControlText;
 
 			CSGreenRight = new DataGridViewCellStyle(CSDefaultRight);
 			CSGreenRight.BackColor =
 			CSGreenRight.SelectionBackColor = CellColorGreen;
+			CSGreenRight.ForeColor = SystemColors.ControlText;
 
 			CSGrayRight = new DataGridViewCellStyle(CSDefaultRight);
 			CSGrayRight.ForeColor =
@@ -119,6 +123,7 @@ namespace ElectronicObserver.Window
 			CSCherryRight = new DataGridViewCellStyle(CSDefaultRight);
 			CSCherryRight.BackColor =
 			CSCherryRight.SelectionBackColor = CellColorCherry;
+			CSCherryRight.ForeColor = SystemColors.ControlText;
 
 			CSIsLocked = new DataGridViewCellStyle(CSDefaultCenter);
 			CSIsLocked.ForeColor =
@@ -605,14 +610,17 @@ namespace ElectronicObserver.Window
 
 
 			if (SelectedTab != null)
+			{
 				SelectedTab.BackColor = TabInactiveColor;
+				SelectedTab.ForeColor = Color.White;
+			}
 
 			SelectedTab = target;
 
 
 			BuildShipView(SelectedTab);
 			SelectedTab.BackColor = TabActiveColor;
-
+			SelectedTab.ForeColor = SystemColors.ControlText;
 
 			if (0 <= headIndex && headIndex < ShipView.Rows.Count)
 			{
