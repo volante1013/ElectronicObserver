@@ -127,11 +127,13 @@ namespace ElectronicObserver.Window
 				if (ShipCount.Tag as bool? ?? false)
 				{
 					ShipCount.BackColor = Color.LightCoral;
+					ShipCount.ForeColor = SystemColors.ControlText;
 				}
 
 				if (EquipmentCount.Tag as bool? ?? false)
 				{
 					EquipmentCount.BackColor = Color.LightCoral;
+					EquipmentCount.ForeColor = SystemColors.ControlText;
 				}
 			}
 
@@ -300,10 +302,12 @@ namespace ElectronicObserver.Window
 				if (RealShipCount > db.Admiral.MaxShipCount - 5)
 				{
 					ShipCount.BackColor = Color.LightCoral;
+					ShipCount.ForeColor = SystemColors.ControlText;
 				}
 				else
 				{
 					ShipCount.BackColor = Color.Transparent;
+					ShipCount.ForeColor = Color.White;
 				}
 				ShipCount.Tag = RealShipCount >= db.Admiral.MaxShipCount;
 
@@ -311,10 +315,12 @@ namespace ElectronicObserver.Window
 				if (RealEquipmentCount > db.Admiral.MaxEquipmentCount + 3 - 20)
 				{
 					EquipmentCount.BackColor = Color.LightCoral;
+					EquipmentCount.ForeColor = SystemColors.ControlText;
 				}
 				else
 				{
 					EquipmentCount.BackColor = Color.Transparent;
+					EquipmentCount.ForeColor = Color.White;
 				}
 				EquipmentCount.Tag = RealEquipmentCount >= db.Admiral.MaxEquipmentCount;
 
@@ -333,6 +339,7 @@ namespace ElectronicObserver.Window
 
 			InstantRepair.Text = db.Material.InstantRepair.ToString();
 			InstantRepair.BackColor = db.Material.InstantRepair >= 3000 ? overcolor : Color.Transparent;
+			InstantRepair.ForeColor = db.Material.InstantRepair >= 3000 ? SystemColors.ControlText : Color.White;
 			ToolTipInfo.SetToolTip(InstantRepair, string.Format("今日: {0:+##;-##;±0}\n今週: {1:+##;-##;±0}\n今月: {2:+##;-##;±0}",
 					resday == null ? 0 : (db.Material.InstantRepair - resday.InstantRepair),
 					resweek == null ? 0 : (db.Material.InstantRepair - resweek.InstantRepair),
@@ -340,6 +347,7 @@ namespace ElectronicObserver.Window
 
 			InstantConstruction.Text = db.Material.InstantConstruction.ToString();
 			InstantConstruction.BackColor = db.Material.InstantConstruction >= 3000 ? overcolor : Color.Transparent;
+			InstantConstruction.ForeColor = db.Material.InstantConstruction >= 3000 ? SystemColors.ControlText : Color.White;
 			ToolTipInfo.SetToolTip(InstantConstruction, string.Format("今日: {0:+##;-##;±0}\n今週: {1:+##;-##;±0}\n今月: {2:+##;-##;±0}",
 					resday == null ? 0 : (db.Material.InstantConstruction - resday.InstantConstruction),
 					resweek == null ? 0 : (db.Material.InstantConstruction - resweek.InstantConstruction),
@@ -347,6 +355,7 @@ namespace ElectronicObserver.Window
 
 			DevelopmentMaterial.Text = db.Material.DevelopmentMaterial.ToString();
 			DevelopmentMaterial.BackColor = db.Material.DevelopmentMaterial >= 3000 ? overcolor : Color.Transparent;
+			DevelopmentMaterial.ForeColor = db.Material.DevelopmentMaterial >= 3000 ? SystemColors.ControlText : Color.White;
 			ToolTipInfo.SetToolTip(DevelopmentMaterial, string.Format("今日: {0:+##;-##;±0}\n今週: {1:+##;-##;±0}\n今月: {2:+##;-##;±0}",
 					resday == null ? 0 : (db.Material.DevelopmentMaterial - resday.DevelopmentMaterial),
 					resweek == null ? 0 : (db.Material.DevelopmentMaterial - resweek.DevelopmentMaterial),
@@ -354,6 +363,7 @@ namespace ElectronicObserver.Window
 
 			ModdingMaterial.Text = db.Material.ModdingMaterial.ToString();
 			ModdingMaterial.BackColor = db.Material.ModdingMaterial >= 3000 ? overcolor : Color.Transparent;
+			ModdingMaterial.ForeColor = db.Material.ModdingMaterial >= 3000 ? SystemColors.ControlText : Color.White;
 			ToolTipInfo.SetToolTip(ModdingMaterial, string.Format("今日: {0:+##;-##;±0}\n今週: {1:+##;-##;±0}\n今月: {2:+##;-##;±0}",
 					resday == null ? 0 : (db.Material.ModdingMaterial - resday.ModdingMaterial),
 					resweek == null ? 0 : (db.Material.ModdingMaterial - resweek.ModdingMaterial),
@@ -361,6 +371,7 @@ namespace ElectronicObserver.Window
 
 			FurnitureCoin.Text = db.Admiral.FurnitureCoin.ToString();
 			FurnitureCoin.BackColor = db.Admiral.FurnitureCoin >= 200000 ? overcolor : Color.Transparent;
+			FurnitureCoin.ForeColor = db.Admiral.FurnitureCoin >= 200000 ? SystemColors.ControlText : Color.White;
 			{
 				int small = db.UseItems[10]?.Count ?? 0;
 				int medium = db.UseItems[11]?.Count ?? 0;
@@ -382,6 +393,7 @@ namespace ElectronicObserver.Window
 
 				Fuel.Text = db.Material.Fuel.ToString();
 				Fuel.BackColor = db.Material.Fuel < db.Admiral.MaxResourceRegenerationAmount ? Color.Transparent : overcolor;
+				Fuel.ForeColor = db.Material.Fuel < db.Admiral.MaxResourceRegenerationAmount ? Color.White : SystemColors.ControlText;
 				ToolTipInfo.SetToolTip(Fuel, string.Format("今日: {0:+##;-##;±0}\n今週: {1:+##;-##;±0}\n今月: {2:+##;-##;±0}",
 					resday == null ? 0 : (db.Material.Fuel - resday.Fuel),
 					resweek == null ? 0 : (db.Material.Fuel - resweek.Fuel),
@@ -389,6 +401,7 @@ namespace ElectronicObserver.Window
 
 				Ammo.Text = db.Material.Ammo.ToString();
 				Ammo.BackColor = db.Material.Ammo < db.Admiral.MaxResourceRegenerationAmount ? Color.Transparent : overcolor;
+				Ammo.ForeColor = db.Material.Fuel < db.Admiral.MaxResourceRegenerationAmount ? Color.White : SystemColors.ControlText;
 				ToolTipInfo.SetToolTip(Ammo, string.Format("今日: {0:+##;-##;±0}\n今週: {1:+##;-##;±0}\n今月: {2:+##;-##;±0}",
 					resday == null ? 0 : (db.Material.Ammo - resday.Ammo),
 					resweek == null ? 0 : (db.Material.Ammo - resweek.Ammo),
@@ -396,6 +409,7 @@ namespace ElectronicObserver.Window
 
 				Steel.Text = db.Material.Steel.ToString();
 				Steel.BackColor = db.Material.Steel < db.Admiral.MaxResourceRegenerationAmount ? Color.Transparent : overcolor;
+				Steel.ForeColor = db.Material.Fuel < db.Admiral.MaxResourceRegenerationAmount ? Color.White : SystemColors.ControlText;
 				ToolTipInfo.SetToolTip(Steel, string.Format("今日: {0:+##;-##;±0}\n今週: {1:+##;-##;±0}\n今月: {2:+##;-##;±0}",
 					resday == null ? 0 : (db.Material.Steel - resday.Steel),
 					resweek == null ? 0 : (db.Material.Steel - resweek.Steel),
@@ -403,6 +417,7 @@ namespace ElectronicObserver.Window
 
 				Bauxite.Text = db.Material.Bauxite.ToString();
 				Bauxite.BackColor = db.Material.Bauxite < db.Admiral.MaxResourceRegenerationAmount ? Color.Transparent : overcolor;
+				Bauxite.ForeColor = db.Material.Fuel < db.Admiral.MaxResourceRegenerationAmount ? Color.White : SystemColors.ControlText;
 				ToolTipInfo.SetToolTip(Bauxite, string.Format("今日: {0:+##;-##;±0}\n今週: {1:+##;-##;±0}\n今月: {2:+##;-##;±0}",
 					resday == null ? 0 : (db.Material.Bauxite - resday.Bauxite),
 					resweek == null ? 0 : (db.Material.Bauxite - resweek.Bauxite),
@@ -432,11 +447,13 @@ namespace ElectronicObserver.Window
 				if (ShipCount.Tag as bool? ?? false)
 				{
 					ShipCount.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightCoral : Color.Transparent;
+					ShipCount.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
 				}
 
 				if (EquipmentCount.Tag as bool? ?? false)
 				{
 					EquipmentCount.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightCoral : Color.Transparent;
+					EquipmentCount.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
 				}
 			}
 		}
@@ -464,6 +481,12 @@ namespace ElectronicObserver.Window
 			}
 		}
 
+		private void ToolTipInfo_Draw(object sender, DrawToolTipEventArgs e)
+		{
+			e.DrawBackground();
+			e.DrawBorder();
+			e.DrawText(TextFormatFlags.VerticalCenter | TextFormatFlags.LeftAndRightPadding | TextFormatFlags.TextBoxControl);
+		}
 
 		private void UpdateDisplayUseItem()
 		{

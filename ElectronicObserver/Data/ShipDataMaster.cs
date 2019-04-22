@@ -665,11 +665,11 @@ namespace ElectronicObserver.Data
 
 
 		private static readonly Color[] ShipNameColors = new Color[] {
-			Color.FromArgb( 0x00, 0x00, 0x00 ),
+			Color.FromArgb( 0xFF, 0xFF, 0xFF ),
 			Color.FromArgb( 0xFF, 0x00, 0x00 ),
 			Color.FromArgb( 0xFF, 0x88, 0x00 ),
-			Color.FromArgb( 0x00, 0x66, 0x00 ),
-			Color.FromArgb( 0x88, 0x00, 0x00 ),
+			Color.FromArgb( 0x00, 0xBB, 0x00 ),
+			Color.FromArgb( 0xFF, 0x48, 0x00 ),
 			Color.FromArgb( 0x00, 0x88, 0xFF ),
 			Color.FromArgb( 0x00, 0x00, 0xFF ),
 		};
@@ -679,7 +679,7 @@ namespace ElectronicObserver.Data
 
 			if (!IsAbyssalShip)
 			{
-				return SystemColors.ControlText;
+				return Color.White;
 			}
 
 			bool isLateModel = Name.Contains("後期型");

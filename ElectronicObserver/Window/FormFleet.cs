@@ -367,6 +367,7 @@ namespace ElectronicObserver.Window
 				HP.UsePrevValue = false;
 				HP.MainFontColor = parent.MainFontColor;
 				HP.SubFontColor = parent.SubFontColor;
+				HP.RepairFontColor = Color.LightBlue;
 				HP.Padding = new Padding(0, 0, 0, 0);
 				HP.Margin = new Padding(2, 1, 2, 2);
 				HP.AutoSize = true;
@@ -487,7 +488,7 @@ namespace ElectronicObserver.Window
 						}
 						else
 						{
-							Name.BackColor = SystemColors.Control;
+							Name.BackColor = Color.FromArgb(64, 64, 64);
 						}
 					}
 
@@ -546,7 +547,8 @@ namespace ElectronicObserver.Window
 					}
 					else
 					{
-						HP.BackColor = SystemColors.Control;
+						HP.BackColor = Color.FromArgb(64, 64, 64);
+						HP.ForeColor = Color.White;
 					}
 					{
 						StringBuilder sb = new StringBuilder();
@@ -854,8 +856,9 @@ namespace ElectronicObserver.Window
 
 			ConfigurationChanged();
 
-			MainFontColor = Color.FromArgb(0x00, 0x00, 0x00);
+			MainFontColor = Color.White;
 			SubFontColor = Color.FromArgb(0x88, 0x88, 0x88);
+
 
 			AnchorageRepairBound = 0;
 
@@ -1264,6 +1267,13 @@ namespace ElectronicObserver.Window
 			{
 				dialog.ShowDialog(this);
 			}
+		}
+
+		private void ToolTipInfo_Draw(object sender, DrawToolTipEventArgs e)
+		{
+			e.DrawBackground();
+			e.DrawBorder();
+			e.DrawText(TextFormatFlags.VerticalCenter | TextFormatFlags.LeftAndRightPadding | TextFormatFlags.TextBoxControl);
 		}
 
 

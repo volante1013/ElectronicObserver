@@ -95,6 +95,7 @@ namespace ElectronicObserver.Window
 				bool showShipName = Utility.Configuration.Config.FormArsenal.ShowShipName;
 
 				CompletionTime.BackColor = Color.Transparent;
+				CompletionTime.ForeColor = Color.White;
 				tooltip.SetToolTip(ShipName, null);
 				tooltip.SetToolTip(CompletionTime, null);
 
@@ -152,6 +153,7 @@ namespace ElectronicObserver.Window
 					if (Utility.Configuration.Config.FormArsenal.BlinkAtCompletion && (time - DateTime.Now).TotalMilliseconds <= Utility.Configuration.Config.NotifierConstruction.AccelInterval)
 					{
 						CompletionTime.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+						CompletionTime.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
 					}
 
 				}
@@ -159,6 +161,7 @@ namespace ElectronicObserver.Window
 				{
 					//完成しているので
 					CompletionTime.BackColor = DateTime.Now.Second % 2 == 0 ? Color.LightGreen : Color.Transparent;
+					CompletionTime.ForeColor = DateTime.Now.Second % 2 == 0 ? SystemColors.ControlText : Color.White;
 				}
 			}
 
@@ -328,6 +331,12 @@ namespace ElectronicObserver.Window
 			e.Graphics.DrawLine(Pens.Silver, e.CellBounds.X, e.CellBounds.Bottom - 1, e.CellBounds.Right - 1, e.CellBounds.Bottom - 1);
 		}
 
+		private void ToolTipInfo_Draw(object sender, DrawToolTipEventArgs e)
+		{
+			e.DrawBackground();
+			e.DrawBorder();
+			e.DrawText(TextFormatFlags.VerticalCenter | TextFormatFlags.LeftAndRightPadding | TextFormatFlags.TextBoxControl);
+		}
 
 
 		protected override string GetPersistString()
