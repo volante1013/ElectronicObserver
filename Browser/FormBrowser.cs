@@ -1,4 +1,4 @@
-﻿using Browser.CefOp;
+using Browser.CefOp;
 using BrowserLib;
 using CefSharp;
 using CefSharp.WinForms;
@@ -106,6 +106,89 @@ namespace Browser
 		}
 
 
+		public class ToolStripBGColor : ProfessionalColorTable
+		{
+			public ToolStripBGColor() : base() { }
+			public override Color MenuItemSelected => Color.Gray;
+			public override Color MenuItemSelectedGradientBegin => Color.Gray;
+			public override Color MenuItemSelectedGradientEnd => Color.Gray;
+			public override Color MenuItemBorder => Color.Gray;
+			public override Color MenuItemPressedGradientBegin => Color.FromArgb(64, 64, 64);
+			public override Color MenuItemPressedGradientMiddle => Color.FromArgb(64, 64, 64);
+			public override Color MenuItemPressedGradientEnd => Color.FromArgb(64, 64, 64);
+			public override Color CheckBackground => Color.Gray;
+			public override Color CheckPressedBackground => Color.Gray;
+			public override Color ImageMarginGradientBegin => Color.FromArgb(64, 64, 64);
+			public override Color ImageMarginGradientMiddle => Color.FromArgb(64, 64, 64);
+			public override Color ImageMarginGradientEnd => Color.FromArgb(64, 64, 64);
+			public override Color ToolStripDropDownBackground => Color.FromArgb(64, 64, 64);
+			public override Color ButtonSelectedBorder => Color.Gray;
+			public override Color ButtonSelectedGradientBegin => Color.Gray;
+			public override Color ButtonSelectedGradientMiddle => Color.Gray;
+			public override Color ButtonSelectedGradientEnd => Color.Gray;
+		}
+		public class CustomToolStripRenderer : ToolStripProfessionalRenderer
+		{
+			public CustomToolStripRenderer(ProfessionalColorTable table) : base(table) { }
+
+			protected override void OnRenderSeparator(ToolStripSeparatorRenderEventArgs e)
+			{
+				if (e.Vertical || !(e.Item is ToolStripSeparator separator))
+				{
+					base.OnRenderSeparator(e);
+				}
+				else
+				{
+					int width = separator.Width;
+					int height = separator.Height;
+
+					e.Graphics.FillRectangle(new SolidBrush(Color.FromArgb(64, 64, 64)), 0, 0, width, height);
+					e.Graphics.DrawLine(new Pen(separator.ForeColor), 4, height / 2, width - 4, height / 2);
+				}
+			}
+
+			protected override void OnRenderArrow(ToolStripArrowRenderEventArgs e)
+			{
+				switch (e.Direction)
+				{
+					case ArrowDirection.Down:
+					{
+						e.ArrowColor = Color.White;
+						base.OnRenderArrow(e);
+						break;
+					}
+					case ArrowDirection.Right:
+					{
+						e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+						var r = new Rectangle(e.ArrowRectangle.Location, e.ArrowRectangle.Size);
+						r.Inflate(-2, -6);
+						e.Graphics.DrawLines(Pens.White, new Point[]{
+							new Point(r.Left, r.Top),
+							new Point(r.Right, r.Top + r.Height /2),
+							new Point(r.Left, r.Top+ r.Height)});
+						break;
+					}
+
+					// 現状このケースはないので未実装
+					case ArrowDirection.Up:
+					case ArrowDirection.Left:
+					default:
+						break;
+				}
+			}
+
+			protected override void OnRenderItemCheck(ToolStripItemImageRenderEventArgs e)
+			{
+				e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+				var r = new Rectangle(e.ImageRectangle.Location, e.ImageRectangle.Size);
+				r.Inflate(-4, -6);
+				e.Graphics.DrawLines(Pens.White, new Point[]{
+					new Point(r.Left, r.Bottom - r.Height /2),
+					new Point(r.Left + r.Width /3,  r.Bottom),
+					new Point(r.Right, r.Top)});
+			}
+		}
+
 
 		/// <summary>
 		/// </summary>
@@ -118,6 +201,7 @@ namespace Browser
 			StyleSheetApplied = false;
 			_volumeManager = new VolumeManager((uint)Process.GetCurrentProcess().Id);
 
+			ToolStripManager.Renderer = new CustomToolStripRenderer(new ToolStripBGColor());
 
 			// 音量設定用コントロールの追加
 			{
