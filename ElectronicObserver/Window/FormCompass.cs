@@ -21,180 +21,180 @@ using WeifenLuo.WinFormsUI.Docking;
 namespace ElectronicObserver.Window
 {
 
-	public partial class FormCompass : DockContent
-	{
+    public partial class FormCompass : DockContent
+    {
 
 
-		private class TableEnemyMemberControl : IDisposable
-		{
+        private class TableEnemyMemberControl : IDisposable
+        {
 
-			public ImageLabel ShipName;
-			public ShipStatusEquipment Equipments;
+            public ImageLabel ShipName;
+            public ShipStatusEquipment Equipments;
 
-			public FormCompass Parent;
-			public ToolTip ToolTipInfo;
-
-
-			public TableEnemyMemberControl(FormCompass parent)
-			{
-
-				#region Initialize
-
-				Parent = parent;
-				ToolTipInfo = parent.ToolTipInfo;
+            public FormCompass Parent;
+            public ToolTip ToolTipInfo;
 
 
-				ShipName = new ImageLabel
-				{
-					Anchor = AnchorStyles.Left,
-					ForeColor = parent.MainFontColor,
-					ImageAlign = ContentAlignment.MiddleCenter,
-					Padding = new Padding(2, 2, 2, 2),
-					Margin = new Padding(2, 0, 2, 1),
-					AutoEllipsis = true,
-					AutoSize = true,
-					Cursor = Cursors.Help
-				};
-				ShipName.MouseClick += ShipName_MouseClick;
+            public TableEnemyMemberControl(FormCompass parent)
+            {
 
-				Equipments = new ShipStatusEquipment();
-				Equipments.SuspendLayout();
-				Equipments.Anchor = AnchorStyles.Left;
-				Equipments.Padding = new Padding(0, 1, 0, 2);
-				Equipments.Margin = new Padding(2, 0, 2, 0);
-				Equipments.AutoSize = true;
-				Equipments.ResumeLayout();
+                #region Initialize
 
-				ConfigurationChanged();
-
-				#endregion
-
-			}
+                Parent = parent;
+                ToolTipInfo = parent.ToolTipInfo;
 
 
-			public TableEnemyMemberControl(FormCompass parent, TableLayoutPanel table, int row)
-				: this(parent)
-			{
+                ShipName = new ImageLabel
+                {
+                    Anchor = AnchorStyles.Left,
+                    ForeColor = parent.MainFontColor,
+                    ImageAlign = ContentAlignment.MiddleCenter,
+                    Padding = new Padding(2, 2, 2, 2),
+                    Margin = new Padding(2, 0, 2, 1),
+                    AutoEllipsis = true,
+                    AutoSize = true,
+                    Cursor = Cursors.Help
+                };
+                ShipName.MouseClick += ShipName_MouseClick;
 
-				AddToTable(table, row);
-			}
+                Equipments = new ShipStatusEquipment();
+                Equipments.SuspendLayout();
+                Equipments.Anchor = AnchorStyles.Left;
+                Equipments.Padding = new Padding(0, 1, 0, 2);
+                Equipments.Margin = new Padding(2, 0, 2, 0);
+                Equipments.AutoSize = true;
+                Equipments.ResumeLayout();
 
-			public void AddToTable(TableLayoutPanel table, int row)
-			{
+                ConfigurationChanged();
 
-				table.Controls.Add(ShipName, 0, row);
-				table.Controls.Add(Equipments, 1, row);
+                #endregion
 
-			}
-
-
-			public void Update(int shipID)
-			{
-				var slot = shipID != -1 ? KCDatabase.Instance.MasterShips[shipID].DefaultSlot : null;
-				Update(shipID, slot?.ToArray());
-			}
-
-
-			public void Update(int shipID, int[] slot)
-			{
-
-				ShipName.Tag = shipID;
-
-				if (shipID == -1)
-				{
-					//なし
-					ShipName.Text = "-";
-					ShipName.ForeColor = Color.White;
-					Equipments.Visible = false;
-					ToolTipInfo.SetToolTip(ShipName, null);
-					ToolTipInfo.SetToolTip(Equipments, null);
-
-				}
-				else
-				{
-
-					ShipDataMaster ship = KCDatabase.Instance.MasterShips[shipID];
+            }
 
 
-					ShipName.Text = ship.Name;
-					ShipName.ForeColor = ship.GetShipNameColor();
-					ToolTipInfo.SetToolTip(ShipName, GetShipString(shipID, slot));
+            public TableEnemyMemberControl(FormCompass parent, TableLayoutPanel table, int row)
+                : this(parent)
+            {
 
-					Equipments.SetSlotList(shipID, slot);
-					Equipments.Visible = true;
-					ToolTipInfo.SetToolTip(Equipments, GetEquipmentString(shipID, slot));
-				}
+                AddToTable(table, row);
+            }
 
-			}
+            public void AddToTable(TableLayoutPanel table, int row)
+            {
 
-			public void UpdateEquipmentToolTip(int shipID, int[] slot, int level, int hp, int firepower, int torpedo, int aa, int armor)
-			{
+                table.Controls.Add(ShipName, 0, row);
+                table.Controls.Add(Equipments, 1, row);
 
-				ToolTipInfo.SetToolTip(ShipName, GetShipString(shipID, slot, level, hp, firepower, torpedo, aa, armor));
-			}
+            }
 
 
-			void ShipName_MouseClick(object sender, MouseEventArgs e)
-			{
-
-				if ((e.Button & System.Windows.Forms.MouseButtons.Right) != 0)
-				{
-					int shipID = ShipName.Tag as int? ?? -1;
-
-					if (shipID != -1)
-						new DialogAlbumMasterShip(shipID).Show(Parent);
-				}
-
-			}
+            public void Update(int shipID)
+            {
+                var slot = shipID != -1 ? KCDatabase.Instance.MasterShips[shipID].DefaultSlot : null;
+                Update(shipID, slot?.ToArray());
+            }
 
 
-			public void ConfigurationChanged()
-			{
-				ShipName.Font = Parent.MainFont;
-				Equipments.Font = Parent.SubFont;
+            public void Update(int shipID, int[] slot)
+            {
 
-				ShipName.MaximumSize = new Size(Utility.Configuration.Config.FormCompass.MaxShipNameWidth, int.MaxValue);
-			}
+                ShipName.Tag = shipID;
 
-			public void Dispose()
-			{
-				ShipName.Dispose();
-				Equipments.Dispose();
-			}
-		}
+                if (shipID == -1)
+                {
+                    //なし
+                    ShipName.Text = "-";
+                    ShipName.ForeColor = Color.White;
+                    Equipments.Visible = false;
+                    ToolTipInfo.SetToolTip(ShipName, null);
+                    ToolTipInfo.SetToolTip(Equipments, null);
 
+                }
+                else
+                {
 
-		private class TableEnemyCandidateControl
-		{
-
-			public ImageLabel[] ShipNames;
-			public ImageLabel Formation;
-			public ImageLabel AirSuperiority;
-
-			public FormCompass Parent;
-			public ToolTip ToolTipInfo;
+                    ShipDataMaster ship = KCDatabase.Instance.MasterShips[shipID];
 
 
-			public TableEnemyCandidateControl(FormCompass parent)
-			{
+                    ShipName.Text = ship.Name;
+                    ShipName.ForeColor = ship.GetShipNameColor();
+                    ToolTipInfo.SetToolTip(ShipName, GetShipString(shipID, slot));
 
-				#region Initialize
+                    Equipments.SetSlotList(shipID, slot);
+                    Equipments.Visible = true;
+                    ToolTipInfo.SetToolTip(Equipments, GetEquipmentString(shipID, slot));
+                }
 
-				Parent = parent;
-				ToolTipInfo = parent.ToolTipInfo;
+            }
+
+            public void UpdateEquipmentToolTip(int shipID, int[] slot, int level, int hp, int firepower, int torpedo, int aa, int armor)
+            {
+
+                ToolTipInfo.SetToolTip(ShipName, GetShipString(shipID, slot, level, hp, firepower, torpedo, aa, armor));
+            }
 
 
-				ShipNames = new ImageLabel[6];
-				for (int i = 0; i < ShipNames.Length; i++)
-				{
-					ShipNames[i] = InitializeImageLabel();
-					ShipNames[i].Cursor = Cursors.Help;
-					ShipNames[i].MouseClick += TableEnemyCandidateControl_MouseClick;
-				}
+            void ShipName_MouseClick(object sender, MouseEventArgs e)
+            {
 
-				Formation = InitializeImageLabel();
-				Formation.Anchor = AnchorStyles.None;
-				/*
+                if ((e.Button & System.Windows.Forms.MouseButtons.Right) != 0)
+                {
+                    int shipID = ShipName.Tag as int? ?? -1;
+
+                    if (shipID != -1)
+                        new DialogAlbumMasterShip(shipID).Show(Parent);
+                }
+
+            }
+
+
+            public void ConfigurationChanged()
+            {
+                ShipName.Font = Parent.MainFont;
+                Equipments.Font = Parent.SubFont;
+
+                ShipName.MaximumSize = new Size(Utility.Configuration.Config.FormCompass.MaxShipNameWidth, int.MaxValue);
+            }
+
+            public void Dispose()
+            {
+                ShipName.Dispose();
+                Equipments.Dispose();
+            }
+        }
+
+
+        private class TableEnemyCandidateControl
+        {
+
+            public ImageLabel[] ShipNames;
+            public ImageLabel Formation;
+            public ImageLabel AirSuperiority;
+
+            public FormCompass Parent;
+            public ToolTip ToolTipInfo;
+
+
+            public TableEnemyCandidateControl(FormCompass parent)
+            {
+
+                #region Initialize
+
+                Parent = parent;
+                ToolTipInfo = parent.ToolTipInfo;
+
+
+                ShipNames = new ImageLabel[6];
+                for (int i = 0; i < ShipNames.Length; i++)
+                {
+                    ShipNames[i] = InitializeImageLabel();
+                    ShipNames[i].Cursor = Cursors.Help;
+                    ShipNames[i].MouseClick += TableEnemyCandidateControl_MouseClick;
+                }
+
+                Formation = InitializeImageLabel();
+                Formation.Anchor = AnchorStyles.None;
+                /*
 				Formation.ImageAlign = ContentAlignment.MiddleLeft;
 				Formation.ImageList = ResourceManager.Instance.Icons;
 				Formation.ImageIndex = -1;
@@ -710,12 +710,13 @@ namespace ElectronicObserver.Window
 					compass.MapInfo.EventDifficulty > 0 ? " [" + Constants.GetDifficulty(compass.MapInfo.EventDifficulty) + "]" : "");
 				{
 					var mapinfo = compass.MapInfo;
+					var sb = new StringBuilder();
 
 					if (mapinfo.RequiredDefeatedCount != -1 && mapinfo.CurrentDefeatedCount < mapinfo.RequiredDefeatedCount)
 					{
-						ToolTipInfo.SetToolTip(TextMapArea, string.Format("{0}撃破: {1} / {2} 回",
+						sb.AppendFormat("{0}撃破: {1} / {2} 回\r\n",
 							mapinfo.CurrentGaugeIndex > 0 ? $"#{mapinfo.CurrentGaugeIndex} " : "",
-							mapinfo.CurrentDefeatedCount, mapinfo.RequiredDefeatedCount));
+							mapinfo.CurrentDefeatedCount, mapinfo.RequiredDefeatedCount);
 
 					}
 					else if (mapinfo.MapHPMax > 0)
@@ -723,15 +724,18 @@ namespace ElectronicObserver.Window
 						int current = compass.MapHPCurrent > 0 ? compass.MapHPCurrent : mapinfo.MapHPCurrent;
 						int max = compass.MapHPMax > 0 ? compass.MapHPMax : mapinfo.MapHPMax;
 
-						ToolTipInfo.SetToolTip(TextMapArea, string.Format("{0}{1}: {2} / {3}",
+						sb.AppendFormat("{0}{1}: {2} / {3}\r\n",
 							mapinfo.CurrentGaugeIndex > 0 ? $"#{mapinfo.CurrentGaugeIndex} " : "",
-							mapinfo.GaugeType == 3 ? "TP" : "HP", current, max));
+							mapinfo.GaugeType == 3 ? "TP" : "HP", current, max);
+					}
 
-					}
-					else
+
+					foreach (var pair in KCDatabase.Instance.Battle.SpecialAttackCount)
 					{
-						ToolTipInfo.SetToolTip(TextMapArea, null);
+						sb.AppendLine($"{Constants.GetDayAttackKind((DayAttackKind)pair.Key)} : 発動済み");
 					}
+
+					ToolTipInfo.SetToolTip(TextMapArea, sb.Length > 0 ? sb.ToString() : null);
 				}
 
 
