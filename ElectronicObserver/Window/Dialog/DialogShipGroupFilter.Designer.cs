@@ -647,6 +647,8 @@
 			// 
 			// SubMenu_ImportFilter
 			// 
+			this.SubMenu_ImportFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.SubMenu_ImportFilter.ForeColor = System.Drawing.Color.White;
 			this.SubMenu_ImportFilter.Name = "SubMenu_ImportFilter";
 			this.SubMenu_ImportFilter.Size = new System.Drawing.Size(188, 22);
 			this.SubMenu_ImportFilter.Text = "フィルタのインポート(&I)";
@@ -654,6 +656,8 @@
 			// 
 			// SubMenu_ExportFilter
 			// 
+			this.SubMenu_ExportFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+			this.SubMenu_ExportFilter.ForeColor = System.Drawing.Color.White;
 			this.SubMenu_ExportFilter.Name = "SubMenu_ExportFilter";
 			this.SubMenu_ExportFilter.Size = new System.Drawing.Size(188, 22);
 			this.SubMenu_ExportFilter.Text = "フィルタのエクスポート(&E)";
