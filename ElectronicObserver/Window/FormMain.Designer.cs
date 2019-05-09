@@ -697,6 +697,8 @@ namespace ElectronicObserver.Window
             // 
             // StripMenu_Tool_ExpChecker
             // 
+            this.StripMenu_Tool_ExpChecker.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.StripMenu_Tool_ExpChecker.ForeColor = System.Drawing.Color.White;
             this.StripMenu_Tool_ExpChecker.Name = "StripMenu_Tool_ExpChecker";
             this.StripMenu_Tool_ExpChecker.Size = new System.Drawing.Size(180, 22);
             this.StripMenu_Tool_ExpChecker.Text = "必要経験値計算(&X)";
@@ -860,6 +862,8 @@ namespace ElectronicObserver.Window
             // 
             // StripMenu_Tool_ExpeditionCheck
             // 
+            this.StripMenu_Tool_ExpeditionCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.StripMenu_Tool_ExpeditionCheck.ForeColor = System.Drawing.Color.White;
             this.StripMenu_Tool_ExpeditionCheck.Name = "StripMenu_Tool_ExpeditionCheck";
             this.StripMenu_Tool_ExpeditionCheck.Size = new System.Drawing.Size(180, 22);
             this.StripMenu_Tool_ExpeditionCheck.Text = "遠征可否チェック(&M)";
