@@ -73,6 +73,7 @@
 			this.menuStrip1.Size = new System.Drawing.Size(774, 24);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
+			this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
 			// 
 			// Menu_File
 			// 

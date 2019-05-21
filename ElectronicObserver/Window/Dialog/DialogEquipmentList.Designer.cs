@@ -131,6 +131,7 @@
             this.TopMenu.Size = new System.Drawing.Size(640, 24);
             this.TopMenu.TabIndex = 1;
             this.TopMenu.Text = "menuStrip1";
+            this.TopMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             // 
             // TopMenu_File
             // 
