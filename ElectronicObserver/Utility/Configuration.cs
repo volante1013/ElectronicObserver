@@ -724,7 +724,7 @@ namespace ElectronicObserver.Utility
 				[IgnoreDataMember]
 				private readonly List<SerializableColor> DefaultSallyAreaColorScheme = new List<SerializableColor>()
 				{
-					SerializableColor.UIntToColor(0xfff0f0f0),
+					SerializableColor.UIntToColor(0xff404040),
 					SerializableColor.UIntToColor(0xffffdddd),
 					SerializableColor.UIntToColor(0xffddffdd),
 					SerializableColor.UIntToColor(0xffddddff),
