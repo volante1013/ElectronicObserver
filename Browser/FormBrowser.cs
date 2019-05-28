@@ -187,6 +187,8 @@ namespace Browser
 					new Point(r.Left + r.Width /3,  r.Bottom),
 					new Point(r.Right, r.Top)});
 			}
+
+			protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e) {}
 		}
 
 

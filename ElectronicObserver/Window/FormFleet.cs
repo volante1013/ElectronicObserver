@@ -484,11 +484,14 @@ namespace ElectronicObserver.Window
 							(colorscheme?.Count ?? 0) > 0 &&
 							ship.SallyArea >= 0)
 						{
-							Name.BackColor = colorscheme[Math.Min(ship.SallyArea, colorscheme.Count - 1)];
+							int index = Math.Min(ship.SallyArea, colorscheme.Count - 1);
+							Name.BackColor = colorscheme[index];
+							Name.ForeColor = (index == 0) ? Color.White : SystemColors.ControlText;
 						}
 						else
 						{
 							Name.BackColor = Color.FromArgb(64, 64, 64);
+							Name.ForeColor = Color.White;
 						}
 					}
 
